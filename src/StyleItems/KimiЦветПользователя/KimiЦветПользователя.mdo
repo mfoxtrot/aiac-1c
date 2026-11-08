@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:StyleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9393aa50-299e-43e3-a603-0d9aa1201307">
+  <name>KimiЦветПользователя</name>
+  <synonym>
+    <key>ru</key>
+    <value>Kimi: цвет текста пользователя</value>
+  </synonym>
+  <value xsi:type="core:ColorValue">
+    <value xsi:type="core:ColorRef">
+      <color>Web.DarkGreen</color>
+    </value>
+  </value>
+</mdclass:StyleItem>

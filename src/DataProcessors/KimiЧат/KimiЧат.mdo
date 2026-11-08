@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="50d8e331-3877-4d03-ab76-f9137b3348ad">
+  <producedTypes>
+    <objectType typeId="43ded269-0a4e-47ee-859a-96c3964aa860" valueTypeId="e0e5330e-3b8e-4627-97fa-57e59e254aeb"/>
+    <managerType typeId="accf4dbd-55b5-4e54-b233-0891694e7a47" valueTypeId="51240a98-fb0d-48b8-aaf1-0086c0f1c16c"/>
+  </producedTypes>
+  <name>KimiЧат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Чат с Kimi</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.KimiЧат.Form.ФормаЧата</defaultForm>
+  <forms uuid="f3937610-fabf-4fa0-9d8a-702a266fda75">
+    <name>ФормаЧата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма чата</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

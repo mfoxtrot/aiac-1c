@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f2d62c39-544b-4566-95eb-13e3f46f89b2">
+  <name>KimiЧат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Чат с Kimi</value>
+  </synonym>
+  <group>NavigationPanelOrdinary</group>
+  <commandParameterType/>
+  <representation>Auto</representation>
+  <toolTip>
+    <key>ru</key>
+    <value>Открывает чат с моделью Kimi: история диалога передается в каждый запрос</value>
+  </toolTip>
+</mdclass:CommonCommand>
