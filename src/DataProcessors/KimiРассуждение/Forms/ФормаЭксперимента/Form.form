@@ -1463,6 +1463,9 @@
   <items xsi:type="form:FormGroup">
     <name>ГруппаПросмотр</name>
     <id>88</id>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаОтветРассуждение</name>
+      <id>99</id>
     <items xsi:type="form:FormField">
       <name>ПросмотрОтвета</name>
       <id>89</id>
@@ -1507,7 +1510,7 @@
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>false</showInFooter>
       <extInfo xsi:type="form:InputFieldExtInfo">
-        <height>3</height>
+        <height>8</height>
         <autoMaxHeight>false</autoMaxHeight>
         <horizontalStretch>true</horizontalStretch>
         <wrap>true</wrap>
@@ -1561,7 +1564,7 @@
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>false</showInFooter>
       <extInfo xsi:type="form:InputFieldExtInfo">
-        <height>4</height>
+        <height>8</height>
         <autoMaxHeight>false</autoMaxHeight>
         <horizontalStretch>true</horizontalStretch>
         <wrap>true</wrap>
@@ -1569,6 +1572,35 @@
         <chooseType>true</chooseType>
         <typeDomainEnabled>true</typeDomainEnabled>
         <textEdit>false</textEdit>
+      </extInfo>
+    </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ГруппаОтветРассуждениеРасширеннаяПодсказка</name>
+        <id>100</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Horizontal</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
