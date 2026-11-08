@@ -109,75 +109,117 @@
 ИЗ
 	РегистрСведений.РезультатыРассужденийKimi КАК Результаты</query>
 	</dataSet>
-	<totalField>
+	<calculatedField>
 		<dataPath>Верных</dataPath>
+		<expression>ВерноЧисло</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Верных</v8:content>
 			</v8:item>
 		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>Верных</dataPath>
 		<expression>Сумма(ВерноЧисло)</expression>
 	</totalField>
-	<totalField>
+	<calculatedField>
 		<dataPath>ВсегоПопыток</dataPath>
+		<expression>1</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Всего попыток</v8:content>
 			</v8:item>
 		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>ВсегоПопыток</dataPath>
 		<expression>Количество(НомерПопытки)</expression>
 	</totalField>
-	<totalField>
+	<calculatedField>
 		<dataPath>ТокеныВсегоСумма</dataPath>
+		<expression>ТокеныВсего</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Токены всего, сумма</v8:content>
 			</v8:item>
 		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>ТокеныВсегоСумма</dataPath>
 		<expression>Сумма(ТокеныВсего)</expression>
 	</totalField>
-	<totalField>
+	<calculatedField>
 		<dataPath>ТокеныРассужденияСумма</dataPath>
+		<expression>ТокеныРассуждения</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Токены рассуждения, сумма</v8:content>
 			</v8:item>
 		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>ТокеныРассужденияСумма</dataPath>
 		<expression>Сумма(ТокеныРассуждения)</expression>
 	</totalField>
-	<totalField>
+	<calculatedField>
 		<dataPath>ТокеныВсегоСредние</dataPath>
+		<expression>ТокеныВсего</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Токены всего, средние</v8:content>
 			</v8:item>
 		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>ТокеныВсегоСредние</dataPath>
 		<expression>Среднее(ТокеныВсего)</expression>
 	</totalField>
-	<totalField>
+	<calculatedField>
 		<dataPath>ВремяСекундСумма</dataPath>
+		<expression>ВремяСекунд</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Время с, сумма</v8:content>
 			</v8:item>
 		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>ВремяСекундСумма</dataPath>
 		<expression>Сумма(ВремяСекунд)</expression>
 	</totalField>
-	<totalField>
+	<calculatedField>
 		<dataPath>ВремяСекундСреднее</dataPath>
+		<expression>ВремяСекунд</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Время с, среднее</v8:content>
 			</v8:item>
 		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>ВремяСекундСреднее</dataPath>
 		<expression>Среднее(ВремяСекунд)</expression>
+	</totalField>
+	<calculatedField>
+		<dataPath>Тест</dataPath>
+		<expression>1</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тест</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>Тест</dataPath>
+		<expression>Сумма(ВремяСекунд)</expression>
 	</totalField>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
@@ -243,6 +285,9 @@
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>ВремяСекундСреднее</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Тест</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:item>

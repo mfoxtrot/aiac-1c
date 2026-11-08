@@ -99,7 +99,11 @@ src/
   xmlns style/sys/web/win). Структура (`dcsset:item`) определяет вывод: вариант
   без единого `dcsset:item` компонуется пустым, даже при заполненных выбранных
   полях; плоская таблица деталей — пустая `StructureItemGroup` без `groupItems`
-  (узел «Детальные записи»). Группировки — `StructureItemGroup` с `GroupItemField`
+  (узел «Детальные записи»). Пользовательские ресурсы с собственными именами
+  задаются **парой**: `<calculatedField>` (dataPath → expression → title —
+  заголовок колонки берётся отсюда) + `<totalField>` (dataPath то же имя,
+  expression — агрегат); «голый» `<totalField>` без calculatedField EDT молча
+  удаляет при сохранении. Группировки — `StructureItemGroup` с `GroupItemField`
   (groupType=Items, periodAdditionType=None, нулевые даты periodAddition),
   выборка — `SelectedItemAuto`/`SelectedItemField`, порядок — `OrderItemField`
   (orderType=Asc). Агрегаты по булевым полям считаем через целые поля, вычисленные
