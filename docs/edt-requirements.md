@@ -36,8 +36,10 @@ src/
 
 ## Технические требования к файлам
 
-- **Окончания строк: CRLF** (как пишет EDT на Windows). LF допустим для XML,
-  но для единообразия все файлы держим в CRLF.
+- **Окончания строк**: EDT на Windows пишет CRLF, однако фактическое состояние
+  файлов репозитория — **LF** (проверено 2026-11-08: весь `src/` и `docs/`).
+  Новые и перезаписанные файлы пишем в LF, как существующие; массовую конвертацию
+  не выполняем, чтобы не шуметь в истории git.
 - Кодировка: UTF-8 (настройка проекта `encoding/<project>=UTF-8`), без BOM.
 - Порядок XML-элементов — строго по схеме EDT (ecore-метамодель пакета
   `http://g5.1c.ru/v8/dt/metadata/mdclass`).
@@ -80,6 +82,22 @@ src/
   с вложенными `columns`), команды формы в `formCommands` (обработчик — `handler/name`
   = имя процедуры модуля формы), обязательный пустой `commandInterface`.
   Эталон структуры: официальная демо-конфигурация 1С (dt-demo-configuration).
+- События формы и элементов: блок `<handlers><event>OnCreateAtServer</event><name>ПриСозданииНаСервере</name></handlers>`
+  (имена событий английские). На уровне формы — после `<autoCommandBar>`, перед
+  `<saveWindowSettings>`; внутри `FormField` — после `dataPath`/`titleLocation`,
+  перед `extendedTooltip`; обработчики расширений поля (StartChoice и пр.) — внутри
+  соответствующего `extInfo`. Без этого блока платформа не вызовет процедуру.
+- Выпадающий список у поля ввода: `<dropListButton>true</dropListButton>` в
+  `InputFieldExtInfo`; значения для строкового реквизита в форме статически не
+  хранятся — список выбора заполняется кодом (`Элементы.Поле.СписокВыбора`,
+  обычно в ПриСозданииНаСервере).
+- Флажок: `<type>CheckBoxField</type>` + `<extInfo xsi:type="form:CheckBoxFieldExtInfo"/>`
+  (пустой блок допустим).
+- Числовой реквизит формы: в `valueType` атрибута —
+  `<numberQualifiers><precision>10</precision><scale>0</scale><nonNegative>true</nonNegative></numberQualifiers>`.
+- `id` элементов формы уникальны только в рамках своего вида: `items`, `attributes`,
+  `formCommands` — независимые пространства (в эталоне у атрибута и элемента
+  совпадают id).
 - Условное оформление (dcssca): default namespace
   `http://v8.1c.ru/8.1/data-composition-system/settings`; фильтр —
   `item xsi:type="FilterItemComparison"` с `left xsi:type="dcscor:Field"`,
@@ -99,3 +117,17 @@ src/
   актуальный список: <https://platform.kimi.ai/docs/models>. Точка смены —
   функция `ИмяМодели()` общего модуля `KimiAPIСервер`.
 - Проверка доступных моделей для конкретного ключа: `GET /v1/models`.
+- Управление форматом ответа (параметры запроса):
+  - `max_tokens` (число) — ограничение длины ответа; малое значение обрезает вывод;
+  - `stop` (строка или массив строк) — стоп-последовательность, генерация обрывается
+    до её появления в тексте;
+  - `response_format` — `{"type": "json_object"}` (JSON Mode: только валидный JSON,
+    поля импровизируются; формат нужно описывать в промпте) или
+    `{"type": "json_schema", "json_schema": {"name": ..., "strict": true, "schema": {...}}}`
+    (Structured Output: структура строго по схеме; при `strict: true` схема должна
+    соответствовать спецификации MFJS; семейство k3.1 держит надёжно, сложные
+    конструкции `anyOf`/`$ref` не использовать). Руководство:
+    <https://platform.kimi.ai/docs/guide/response_format>.
+- В ответе полезны `choices[0].finish_reason` (`"length"` — обрезан по `max_tokens`)
+  и `usage` (`prompt_tokens`, `completion_tokens`, `total_tokens`) — используем
+  для статусной строки чата.
