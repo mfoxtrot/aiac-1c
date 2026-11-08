@@ -19,8 +19,8 @@
 			<field>УсилиеРассуждения</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Попытка</dataPath>
-			<field>Попытка</field>
+			<dataPath>НомерПопытки</dataPath>
+			<field>НомерПопытки</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ДатаЗапуска</dataPath>
@@ -83,7 +83,7 @@
 	Результаты.Задача КАК Задача,
 	Результаты.Способ КАК Способ,
 	Результаты.УсилиеРассуждения КАК УсилиеРассуждения,
-	Результаты.Попытка КАК Попытка,
+	Результаты.НомерПопытки КАК НомерПопытки,
 	Результаты.ДатаЗапуска КАК ДатаЗапуска,
 	Результаты.Верно КАК Верно,
 	ВЫБОР
@@ -115,7 +115,7 @@
 	</totalField>
 	<totalField>
 		<dataPath>ВсегоПопыток</dataPath>
-		<expression>Количество(Попытка)</expression>
+		<expression>Количество(НомерПопытки)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ТокеныВсегоСумма</dataPath>
@@ -202,7 +202,7 @@
 					<dcsset:field>УсилиеРассуждения</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Попытка</dcsset:field>
+					<dcsset:field>НомерПопытки</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ДатаЗапуска</dcsset:field>
@@ -255,7 +255,7 @@
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Попытка</dcsset:field>
+					<dcsset:field>НомерПопытки</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 			</dcsset:order>

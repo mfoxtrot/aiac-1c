@@ -1100,7 +1100,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Результаты.Попытка</segments>
+        <segments>Результаты.НомерПопытки</segments>
       </dataPath>
       <extendedTooltip>
         <name>РезультатыПопыткаРасширеннаяПодсказка</name>
@@ -1957,10 +1957,10 @@
       </edit>
     </columns>
     <columns>
-      <name>Попытка</name>
+      <name>НомерПопытки</name>
       <title>
         <key>ru</key>
-        <value>Попытка</value>
+        <value>НомерПопытки</value>
       </title>
       <id>4</id>
       <valueType>

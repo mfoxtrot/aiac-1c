@@ -337,10 +337,10 @@
     <fillValue xsi:type="core:UndefinedValue"/>
   </dimensions>
   <dimensions uuid="c0f02f0d-67a8-4024-a590-3b7c8f033c72">
-    <name>Попытка</name>
+    <name>НомерПопытки</name>
     <synonym>
       <key>ru</key>
-      <value>Попытка</value>
+      <value>НомерПопытки</value>
     </synonym>
     <type>
       <types>Number</types>
