@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Задача</dataPath>
+			<field>Задача</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Способ</dataPath>
+			<field>Способ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УсилиеРассуждения</dataPath>
+			<field>УсилиеРассуждения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Попытка</dataPath>
+			<field>Попытка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗапуска</dataPath>
+			<field>ДатаЗапуска</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Верно</dataPath>
+			<field>Верно</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерноЧисло</dataPath>
+			<field>ВерноЧисло</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭталонНайден</dataPath>
+			<field>ЭталонНайден</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭталонНайденЧисло</dataPath>
+			<field>ЭталонНайденЧисло</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответ</dataPath>
+			<field>Ответ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Рассуждение</dataPath>
+			<field>Рассуждение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СоставленныйПромпт</dataPath>
+			<field>СоставленныйПромпт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТокеныЗапроса</dataPath>
+			<field>ТокеныЗапроса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТокеныОтвета</dataPath>
+			<field>ТокеныОтвета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТокеныВсего</dataPath>
+			<field>ТокеныВсего</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТокеныРассуждения</dataPath>
+			<field>ТокеныРассуждения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВремяСекунд</dataPath>
+			<field>ВремяСекунд</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СообщениеОбОшибке</dataPath>
+			<field>СообщениеОбОшибке</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Результаты.Задача КАК Задача,
+	Результаты.Способ КАК Способ,
+	Результаты.УсилиеРассуждения КАК УсилиеРассуждения,
+	Результаты.Попытка КАК Попытка,
+	Результаты.ДатаЗапуска КАК ДатаЗапуска,
+	Результаты.Верно КАК Верно,
+	ВЫБОР
+		КОГДА Результаты.Верно
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВерноЧисло,
+	Результаты.ЭталонНайден КАК ЭталонНайден,
+	ВЫБОР
+		КОГДА Результаты.ЭталонНайден
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЭталонНайденЧисло,
+	Результаты.Ответ КАК Ответ,
+	Результаты.Рассуждение КАК Рассуждение,
+	Результаты.СоставленныйПромпт КАК СоставленныйПромпт,
+	Результаты.ТокеныЗапроса КАК ТокеныЗапроса,
+	Результаты.ТокеныОтвета КАК ТокеныОтвета,
+	Результаты.ТокеныВсего КАК ТокеныВсего,
+	Результаты.ТокеныРассуждения КАК ТокеныРассуждения,
+	Результаты.ВремяМиллисекунд / 1000 КАК ВремяСекунд,
+	Результаты.СообщениеОбОшибке КАК СообщениеОбОшибке
+ИЗ
+	РегистрСведений.РезультатыРассужденийKimi КАК Результаты</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Верных</dataPath>
+		<expression>Сумма(ВерноЧисло)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВсегоПопыток</dataPath>
+		<expression>Количество(Попытка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТокеныВсегоСумма</dataPath>
+		<expression>Сумма(ТокеныВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТокеныРассужденияСумма</dataPath>
+		<expression>Сумма(ТокеныРассуждения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТокеныВсегоСредние</dataPath>
+		<expression>Среднее(ТокеныВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВремяСекундСумма</dataPath>
+		<expression>Сумма(ВремяСекунд)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВремяСекундСреднее</dataPath>
+		<expression>Среднее(ВремяСекунд)</expression>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сводка: способ × усилие</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Способ</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>УсилиеРассуждения</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ДеталиПоЗадачам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Детали по задачам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Задача</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Способ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УсилиеРассуждения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Попытка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаЗапуска</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Верно</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЭталонНайден</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТокеныЗапроса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТокеныОтвета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТокеныВсего</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТокеныРассуждения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВремяСекунд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СообщениеОбОшибке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ответ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Рассуждение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СоставленныйПромпт</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Задача</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Способ</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>УсилиеРассуждения</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Попытка</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

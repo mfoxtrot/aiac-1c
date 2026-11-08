@@ -23,6 +23,9 @@ src/
 
 Файлы верхнего уровня (Configuration.mdo, *.cmi) остаются в `src/Configuration/`,
 объектные папки — в `src/<Класс>/`. Именно так их создаёт сама EDT данной версии.
+Папки объектных типов идут **без префикса типа** в имени: `Catalogs/<Имя>/`,
+`Enums/<Имя>/`, `InformationRegisters/<Имя>/`, `Reports/<Имя>/`; префиксы
+(`Catalog.`, `EnumRef.` и т.п.) встречаются только внутри ссылок.
 
 ## Имена файлов модулей по типам объектов
 
@@ -36,9 +39,10 @@ src/
 
 ## Технические требования к файлам
 
-- **Окончания строк**: EDT на Windows пишет CRLF, однако фактическое состояние
-  файлов репозитория — **LF** (проверено 2026-11-08: весь `src/` и `docs/`).
-  Новые и перезаписанные файлы пишем в LF, как существующие; массовую конвертацию
+- **Окончания строк**: EDT на Windows пишет CRLF — и фактическое состояние
+  файлов репозитория — **CRLF** (подтверждено побайтовой проверкой 2026-11-08;
+  запись про LF, сделанная ранее в этот же день, была ошибочной). Новые
+  и перезаписанные файлы пишем в CRLF, как существующие; массовую конвертацию
   не выполняем, чтобы не шуметь в истории git.
 - Кодировка: UTF-8 (настройка проекта `encoding/<project>=UTF-8`), без BOM.
 - Порядок XML-элементов — строго по схеме EDT (ecore-метамодель пакета
@@ -58,8 +62,45 @@ src/
   вызов с клиента = `Сервер` + `Вызов сервера` (без флагов обычного приложения
   и внешнего соединения).
 - **Ссылки из Configuration.mdo**: `<commonModules>CommonModule.Имя</commonModules>`
-  и т.п. — формат верный, «потерянные ссылки» возникают только если объект
-  физически лежит не в том каталоге (см. структуру выше).
+  и т.п. — формат верный. Секции добавляются в фиксированном порядке схемы:
+  ... `commonModules`, `commonCommands`, `constants`, `commonForms`, `catalogs`,
+  `documents`, `enums`, `reports`, `dataProcessors`, `informationRegisters` ...
+  Блок `containedObjects` (7 classId) — константный список классов корня,
+  новыми объектами не пополняется.
+- **Перечисление**: `producedTypes` — refType, listType, managerType (по 2 UUID);
+  значения — блоки `enumValues` (uuid + name + synonym). Имена значений —
+  валидные идентификаторы; латиница в нижнем регистре допустима (`low`, `max`).
+- **Справочник**: `producedTypes` — 5 пар UUID (objectType, refType, selectionType,
+  listType, managerType); блоки `standardAttributes` (9 шт.: PredefinedDataName,
+  Predefined, Ref, DeletionMark, IsFolder, Owner, Parent, Description, Code) EDT
+  пишет всегда; далее `codeLength`, `descriptionLength`, `levelCount` и реквизиты
+  в `attributes` (после `quickChoice`/`choiceMode`). Строка без ограничения — пустой
+  `<stringQualifiers/>`.
+- **Регистр сведений** (независимый, непериодический): `producedTypes` — 7 пар
+  UUID (selectionType, listType, managerType, recordSetType, recordKeyType,
+  recordType, recordManagerType); `standardAttributes` — Active, LineNumber,
+  Recorder, Period; периодический регистр пишет `informationRegisterPeriodicity`
+  (независимый непериодический — опускает, как и признак подчинения регистратору);
+  порядок блоков: `resources`, `dimensions`, `attributes` (реквизиты), `forms`;
+  у ссылочных измерений — `denyIncompleteValues` и `fillValue`
+  (`core:ReferenceValue` → `Catalog.<Имя>.EmptyRef`); типы ссылок:
+  `CatalogRef.<Имя>`, `EnumRef.<Имя>`.
+- **Отчёт СКД**: `Reports/<Имя>/<Имя>.mdo` +
+  `Templates/ОсновнаяСхемаКомпоновкиДанных/Template.dcs`; в mdo —
+  `mainDataCompositionSchema` и блок `templates` с `templateType` =
+  DataCompositionSchema; собственная форма не нужна (платформа даёт автоформу
+  отчёта, открывается из кода через `ОткрытьФорму("Отчет.<Имя>")`).
+- **Template.dcs**: корень `DataCompositionSchema` (namespace
+  `http://v8.1c.ru/8.1/data-composition-system/schema`); порядок: `dataSource`
+  (Local) → `dataSet` (DataSetQuery: перечисленные `field` + текст `query`,
+  `&` экранируется `&amp;`) → `totalField` (dataPath + expression, напр.
+  `Сумма(Поле)`) → `settingsVariant`. Варианты настроек: `dcsset:name` +
+  `dcsset:presentation` (v8:LocalStringType) + `dcsset:settings` (с объявлением
+  xmlns style/sys/web/win); группировки — `StructureItemGroup` с `GroupItemField`
+  (groupType=Items, periodAdditionType=None, нулевые даты periodAddition),
+  выборка — `SelectedItemAuto`/`SelectedItemField`, порядок — `OrderItemField`
+  (orderType=Asc). Агрегаты по булевым полям считаем через целые поля, вычисленные
+  в запросе: `ВЫБОР КОГДА Т.Верно ТОГДА 1 ИНАЧЕ 0 КОНЕЦ`.
 
 ## BSL-код
 
@@ -68,6 +109,10 @@ src/
 - `Сообщить()` подсвечивается плагином BSL Language Server как устаревший
   (диагностика DeprecatedMessage, важность «незначительная»). Осознанно
   используем как «консоль» вывода — в конфигурации нет БСП-обёртки.
+- Длительный клиентский цикл формы разбивается на шаги через
+  `ПодключитьОбработчикОжидания(..., 0.1, Истина)`: управление возвращается
+  в цикл обработки событий, интерфейс обновляет прогресс, кнопка «Остановить»
+  успевает отработать между шагами.
 
 ## Обработки с формами
 
@@ -85,8 +130,7 @@ src/
 - События формы и элементов: блок `<handlers><event>OnCreateAtServer</event><name>ПриСозданииНаСервере</name></handlers>`
   (имена событий английские). На уровне формы — после `<autoCommandBar>`, перед
   `<saveWindowSettings>`; внутри `FormField` — после `dataPath`/`titleLocation`,
-  перед `extendedTooltip`; обработчики расширений поля (StartChoice и пр.) — внутри
-  соответствующего `extInfo`. Без этого блока платформа не вызовет процедуру.
+  перед `extendedTooltip`; у таблицы — после `dataPath`. Без этого блока платформа не вызовет процедуру.
 - Выпадающий список у поля ввода: `<dropListButton>true</dropListButton>` в
   `InputFieldExtInfo`; значения для строкового реквизита в форме статически не
   хранятся — список выбора заполняется кодом (`Элементы.Поле.СписокВыбора`,
@@ -117,6 +161,13 @@ src/
   актуальный список: <https://platform.kimi.ai/docs/models>. Точка смены —
   функция `ИмяМодели()` общего модуля `KimiAPIСервер`.
 - Проверка доступных моделей для конкретного ключа: `GET /v1/models`.
+- Рассуждение (K3.1): всегда включено, отключить нельзя; управляется
+  **верхнеуровневым** полем запроса `reasoning_effort` со значениями `low`,
+  `high`, `max` (по умолчанию `max` — Дни 1–2 фактически работали с `max`,
+  поле не передавали). В ответе отдельно приходит `reasoning_content`
+  (цепочка рассуждения) рядом с `content`; токены рассуждения —
+  `usage.completion_tokens_details.reasoning_tokens`. `temperature`/`top_p`
+  фиксированы платформой — не отправлять.
 - Управление форматом ответа (параметры запроса):
   - `max_tokens` (число) — ограничение длины ответа; малое значение обрезает вывод;
   - `stop` (строка или массив строк) — стоп-последовательность, генерация обрывается

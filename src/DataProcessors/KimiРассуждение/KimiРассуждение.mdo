@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b3762bed-616e-43d1-9504-874062bc1ab2">
+  <producedTypes>
+    <objectType typeId="195e4896-3f1d-49e0-83fa-ba15b07a6922" valueTypeId="c09d7633-11b9-4b52-aaaf-9272af578c57"/>
+    <managerType typeId="762fb6d2-2159-4229-a832-56e6dc75108b" valueTypeId="a629148f-3b08-4469-91c5-ae1ad804d6ac"/>
+  </producedTypes>
+  <name>KimiРассуждение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Способы рассуждения Kimi</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.KimiРассуждение.Form.ФормаЭксперимента</defaultForm>
+  <forms uuid="3d9ae59a-f06a-4b24-9057-7c036a553145">
+    <name>ФормаЭксперимента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма эксперимента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+  </forms>
+</mdclass:DataProcessor>
