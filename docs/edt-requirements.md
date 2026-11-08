@@ -67,6 +67,30 @@ src/
   (диагностика DeprecatedMessage, важность «незначительная»). Осознанно
   используем как «консоль» вывода — в конфигурации нет БСП-обёртки.
 
+## Обработки с формами
+
+- Обработка `DataProcessor`: обязателен `producedTypes` (objectType + managerType,
+  по 2 UUID на каждый); форма указывается через `defaultForm` и вложенный блок
+  `<forms uuid="...">` внутри .mdo обработки (отдельного .mdo у формы нет).
+- Папка формы: `Forms/<ИмяФормы>/` содержит `Form.form` (описание элементов),
+  `Module.bsl` (модуль формы) и при наличии `ConditionalAppearance.dcssca`
+  (условное оформление — подхватывается по имени файла, ссылка в Form.form не нужна).
+- `Form.form`: корневой `form:Form` (namespace `http://g5.1c.ru/v8/dt/form`), элементы
+  с числовыми `id`, реквизиты в `attributes` (таблица значений — `types>ValueTable`
+  с вложенными `columns`), команды формы в `formCommands` (обработчик — `handler/name`
+  = имя процедуры модуля формы), обязательный пустой `commandInterface`.
+  Эталон структуры: официальная демо-конфигурация 1С (dt-demo-configuration).
+- Условное оформление (dcssca): default namespace
+  `http://v8.1c.ru/8.1/data-composition-system/settings`; фильтр —
+  `item xsi:type="FilterItemComparison"` с `left xsi:type="dcscor:Field"`,
+  `comparisonType`, `right xsi:type="xs:string"`; оформление —
+  `dcscor:item xsi:type="SettingsParameterValue"` с параметром (`ЦветТекста` и пр.)
+  и значением. **Важно:** значение цвета строками `web:Имя`/`style:Имя` EDT
+  не распознаёт (подставляет жёлтый 255,255,0) — ссылку на элемент стиля
+  задавать атрибутами: `<dcscor:value xsi:type="v8ui:Color" ref="style:ИмяСтиля" kind="StyleItem"/>`.
+  Сами цвета хранятся в элементах стиля (StyleItem) со значением
+  `core:ColorValue` → `core:ColorRef` → `Web.Имя` (именно с точкой).
+
 ## Kimi API
 
 - Endpoint: `api.moonshot.ai` (глобальный), протокол совместим с OpenAI

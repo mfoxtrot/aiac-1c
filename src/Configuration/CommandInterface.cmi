@@ -3,7 +3,7 @@
   <commandsOrder>
     <orderFragments>
       <group>NavigationPanelOrdinary</group>
-      <commands>CommonCommand.KimiПростойЗапрос</commands>
+      <commands>CommonCommand.KimiЧат</commands>
     </orderFragments>
   </commandsOrder>
 </cmi:CommandInterface>
