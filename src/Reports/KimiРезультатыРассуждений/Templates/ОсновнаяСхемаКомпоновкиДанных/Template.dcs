@@ -111,30 +111,72 @@
 	</dataSet>
 	<totalField>
 		<dataPath>Верных</dataPath>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Верных</v8:content>
+			</v8:item>
+		</title>
 		<expression>Сумма(ВерноЧисло)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ВсегоПопыток</dataPath>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Всего попыток</v8:content>
+			</v8:item>
+		</title>
 		<expression>Количество(НомерПопытки)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ТокеныВсегоСумма</dataPath>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Токены всего, сумма</v8:content>
+			</v8:item>
+		</title>
 		<expression>Сумма(ТокеныВсего)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ТокеныРассужденияСумма</dataPath>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Токены рассуждения, сумма</v8:content>
+			</v8:item>
+		</title>
 		<expression>Сумма(ТокеныРассуждения)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ТокеныВсегоСредние</dataPath>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Токены всего, средние</v8:content>
+			</v8:item>
+		</title>
 		<expression>Среднее(ТокеныВсего)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ВремяСекундСумма</dataPath>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Время с, сумма</v8:content>
+			</v8:item>
+		</title>
 		<expression>Сумма(ВремяСекунд)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ВремяСекундСреднее</dataPath>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Время с, среднее</v8:content>
+			</v8:item>
+		</title>
 		<expression>Среднее(ВремяСекунд)</expression>
 	</totalField>
 	<settingsVariant>
