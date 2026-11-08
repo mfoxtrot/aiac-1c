@@ -39,4 +39,8 @@
     </synonym>
     <languageCode>ru</languageCode>
   </languages>
+  <commonModules>CommonModule.KimiAPIКлиент</commonModules>
+  <commonModules>CommonModule.KimiAPIСервер</commonModules>
+  <commonCommands>CommonCommand.KimiПростойЗапрос</commonCommands>
+  <constants>Constant.KimiApiKey</constants>
 </mdclass:Configuration>

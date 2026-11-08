@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="21d22d52-a413-4885-bf48-7b391cc8af79">
+  <producedTypes>
+    <managerType typeId="9a9df964-803e-4155-be83-df4eb993328c" valueTypeId="92f82a47-95c0-4cb8-8af4-b3bfae5cf4c1"/>
+    <valueManagerType typeId="63cd92e0-497b-4352-9dc6-dabc030fcdd5" valueTypeId="adc6f8fd-1aa8-4e4b-a5fb-4bedb5c120fe"/>
+    <valueKeyType typeId="898b8d5d-9694-4625-a690-4ce9c3d7f7a1" valueTypeId="01a02f57-7f5a-45e3-9bf4-538ca90d4bce"/>
+  </producedTypes>
+  <name>KimiApiKey</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ключ API Kimi</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>250</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <passwordMode>true</passwordMode>
+  <toolTip>
+    <key>ru</key>
+    <value>Ключ доступа к API Kimi (Moonshot AI). Заполняется в режиме 1С:Предприятие.</value>
+  </toolTip>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>
