@@ -96,7 +96,10 @@ src/
   `&` экранируется `&amp;`) → `totalField` (dataPath + expression, напр.
   `Сумма(Поле)`) → `settingsVariant`. Варианты настроек: `dcsset:name` +
   `dcsset:presentation` (v8:LocalStringType) + `dcsset:settings` (с объявлением
-  xmlns style/sys/web/win); группировки — `StructureItemGroup` с `GroupItemField`
+  xmlns style/sys/web/win). Структура (`dcsset:item`) определяет вывод: вариант
+  без единого `dcsset:item` компонуется пустым, даже при заполненных выбранных
+  полях; плоская таблица деталей — пустая `StructureItemGroup` без `groupItems`
+  (узел «Детальные записи»). Группировки — `StructureItemGroup` с `GroupItemField`
   (groupType=Items, periodAdditionType=None, нулевые даты periodAddition),
   выборка — `SelectedItemAuto`/`SelectedItemField`, порядок — `OrderItemField`
   (orderType=Asc). Агрегаты по булевым полям считаем через целые поля, вычисленные
