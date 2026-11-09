@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d06fc10d-5fc1-4371-9632-01d2b9b9ab16">
+  <producedTypes>
+    <objectType typeId="f10ace2f-16c7-4208-8733-762758c2f448" valueTypeId="5a3d10cf-70f0-4e3f-9579-1fe6c7eec3e9"/>
+    <managerType typeId="df1fa5c7-56a8-4401-8743-ac01f37b0f9d" valueTypeId="5b6737ac-c080-493b-90c6-f3152b0bdd22"/>
+  </producedTypes>
+  <name>KimiАгент</name>
+  <synonym>
+    <key>ru</key>
+    <value>Агент Kimi</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.KimiАгент.Form.ФормаАгента</defaultForm>
+  <forms uuid="66678aee-3f51-4138-8bac-40327349847b">
+    <name>ФормаАгента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма агента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+  </forms>
+</mdclass:DataProcessor>
