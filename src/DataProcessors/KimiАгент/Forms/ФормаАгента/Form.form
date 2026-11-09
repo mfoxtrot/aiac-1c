@@ -19,7 +19,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>ЧатТабДок</segments>
+          <segments>ЧатHTML</segments>
         </dataPath>
         <titleLocation>None</titleLocation>
         <extendedTooltip>
@@ -47,21 +47,16 @@
           </userVisible>
           <autoFill>true</autoFill>
         </contextMenu>
-        <type>SpreadsheetDocumentField</type>
+        <type>HTMLDocumentField</type>
+        <editMode>Enter</editMode>
         <showInHeader>false</showInHeader>
         <showInFooter>false</showInFooter>
-        <extInfo xsi:type="form:SpreadsheetDocumentFieldExtInfo">
-          <width>70</width>
-          <autoMaxWidth>true</autoMaxWidth>
-          <height>20</height>
-          <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:HtmlFieldExtInfo">
+          <width>60</width>
+          <height>22</height>
           <horizontalStretch>true</horizontalStretch>
           <verticalStretch>true</verticalStretch>
-          <showGrid>false</showGrid>
-          <showHeaders>false</showHeaders>
-          <edit>false</edit>
-          <contextMenuType>Auto</contextMenuType>
-          <showGroups>false</showGroups>
+          <output>Disable</output>
         </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
@@ -790,10 +785,6 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
-  <handlers>
-    <event>OnCreateAtClient</event>
-    <name>ПриСозданииНаКлиенте</name>
-  </handlers>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
   <group>Vertical</group>
@@ -863,6 +854,26 @@
       <valueType>
         <types>String</types>
         <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Отправлено</name>
+      <title>
+        <key>ru</key>
+        <value>Отправлено</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>DateTime</dateFractions>
+        </dateQualifiers>
       </valueType>
       <view>
         <common>true</common>
@@ -1041,14 +1052,15 @@
     </edit>
   </attributes>
   <attributes>
-    <name>ЧатТабДок</name>
+    <name>ЧатHTML</name>
     <title>
       <key>ru</key>
       <value>Диалог с агентом</value>
     </title>
     <id>7</id>
     <valueType>
-      <types>SpreadsheetDocument</types>
+      <types>String</types>
+      <stringQualifiers/>
     </valueType>
     <view>
       <common>true</common>
