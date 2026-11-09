@@ -7,4 +7,8 @@
   </synonym>
   <comment>Первая неделя курса (Дни 1–5): чат с историей, формат ответа, способы рассуждения, температура, версии моделей</comment>
   <includeInCommandInterface>true</includeInCommandInterface>
+  <content>CommonCommand.KimiМодели</content>
+  <content>CommonCommand.KimiРассуждение</content>
+  <content>CommonCommand.KimiТемпература</content>
+  <content>CommonCommand.KimiЧат</content>
 </mdclass:Subsystem>

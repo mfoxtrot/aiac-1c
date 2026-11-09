@@ -7,4 +7,5 @@
   </synonym>
   <comment>Вторая неделя курса (День 6 и далее): агент с инструментами (function calling)</comment>
   <includeInCommandInterface>true</includeInCommandInterface>
+  <content>CommonCommand.KimiАгент</content>
 </mdclass:Subsystem>
