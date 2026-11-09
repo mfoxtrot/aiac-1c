@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fca5d530-25c4-4ddc-8348-9b59d91a9bf3">
+  <name>KimiМодели</name>
+  <synonym>
+    <key>ru</key>
+    <value>Версии моделей Kimi</value>
+  </synonym>
+  <group>NavigationPanelOrdinary</group>
+  <commandParameterType/>
+  <representation>Auto</representation>
+  <toolTip>
+    <key>ru</key>
+    <value>Открывает эксперимент: одни и те же задачи решаются малой дешёвой (Google AI Studio, бесплатный тариф), средней и флагманской моделями; сравниваются точность, скорость, токены и стоимость; выводы формирует модель-аналитик</value>
+  </toolTip>
+</mdclass:CommonCommand>

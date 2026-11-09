@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c5f04ab7-21ba-4ab3-926e-ee637694a3da">
+  <producedTypes>
+    <selectionType typeId="aaac164c-db58-47ed-b277-fec754f338bd" valueTypeId="4dcb4089-b0d7-4c84-9a54-14b1d8dd0f83"/>
+    <listType typeId="ea317578-0f65-47a6-a659-d0adc9ff769e" valueTypeId="2ea3bdee-687c-4785-a41b-8311e35615a4"/>
+    <managerType typeId="b431e787-e099-4244-9cee-a63beac848bf" valueTypeId="5ae9c43a-5691-4e10-a55e-3610b1e843c7"/>
+    <recordSetType typeId="e9c139a7-92b2-4b23-88cb-5f59f68c0c2a" valueTypeId="53f5031e-a793-47db-9761-688ec17a4c67"/>
+    <recordKeyType typeId="2c8c1cc4-24e8-430b-898f-890bec56e8cc" valueTypeId="15c1ed55-d760-46f0-ae9d-365c6309b3fa"/>
+    <recordType typeId="ce1fa121-a2c9-47cf-ab27-189dca7be0a4" valueTypeId="fa24da52-b5d9-456a-a5af-7be7a1928c59"/>
+    <recordManagerType typeId="36516d34-3c04-479d-8ce7-ed749118d2f2" valueTypeId="ed73d47b-0f44-4889-99c0-14a23eb45563"/>
+  </producedTypes>
+  <name>РезультатыМоделейKimi</name>
+  <synonym>
+    <key>ru</key>
+    <value>Результаты сравнения моделей Kimi</value>
+  </synonym>
+  <dataHistory>Use</dataHistory>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Результат попытки</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Результаты сравнения моделей</value>
+  </listPresentation>
+  <resources uuid="18876d1f-9701-4b7c-a8f4-f6efcc49bcbe">
+    <name>Ответ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответ модели</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="eb0293ad-ff90-47cc-90b6-05fd03c71986">
+    <name>Рассуждение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рассуждение модели</value>
+    </synonym>
+    <toolTip>
+      <key>ru</key>
+      <value>Цепочка рассуждения (reasoning_content); пусто, если модель её не возвращает</value>
+    </toolTip>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="4c98cd96-0504-4dc4-a856-e0f4a49ebbc1">
+    <name>Верно</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответ верен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Окончательная отметка правильности; проставляется пользователем</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="214974a0-32d1-49ee-8643-64f2a1627f6c">
+    <name>ЭталонНайден</name>
+    <synonym>
+      <key>ru</key>
+      <value>Эталон найден в ответе</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Автоматическая подсказка: эталонный ответ найден в тексте ответа модели</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="30bd00ed-cbcd-4dde-9179-aee9224d8ea7">
+    <name>ТокеныЗапроса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Токены запроса</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>0</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="6ebf6bf7-4398-471a-89d5-41fba7633ad6">
+    <name>ТокеныОтвета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Токены ответа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>0</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="383bc281-4920-4b98-b16e-5ba56c75fbbd">
+    <name>ТокеныРассуждения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Токены рассуждения</value>
+    </synonym>
+    <toolTip>
+      <key>ru</key>
+      <value>Токены рассуждения (reasoning_tokens); 0, если модель не рассуждает</value>
+    </toolTip>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>0</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="8f24fae4-5069-455e-bfde-3d1772eba96c">
+    <name>ТокеныВсего</name>
+    <synonym>
+      <key>ru</key>
+      <value>Токены всего</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>0</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="973db660-91c9-425c-84cc-fdaf47e6db1f">
+    <name>ВремяМиллисекунд</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время, мс</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>0</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="353bb878-2b1d-4e6d-b33a-04cbe5f01e0c">
+    <name>Стоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость, USD</value>
+    </synonym>
+    <toolTip>
+      <key>ru</key>
+      <value>Расчётная стоимость вызова по тарифам провайдера (см. KimiМоделиСервер.ЦенаМодели); для бесплатного тарифа Google AI Studio считается по ценам платного тарифа</value>
+    </toolTip>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>6</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="f01535f7-3461-43a3-aa44-cc05b43ace46">
+    <name>СообщениеОбОшибке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение об ошибке</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Текст ошибки API; пусто, если попытка выполнена успешно</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="9fc5ad96-224a-4f59-8809-87f56bdc0e9e">
+    <name>Задача</name>
+    <synonym>
+      <key>ru</key>
+      <value>Задача</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.KimiЗадачиРассуждений</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+  <dimensions uuid="7fed496d-cc8a-4f3e-a52a-7157e455ad8f">
+    <name>Модель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Модель</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Имя модели провайдера (строкой: имена кросс-провайдерные, фиксированного списка значений нет)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </dimensions>
+  <dimensions uuid="e4020361-bba8-4cc3-b9ba-03d2ed1ff755">
+    <name>НомерПопытки</name>
+    <synonym>
+      <key>ru</key>
+      <value>НомерПопытки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <scale>0</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </dimensions>
+  <attributes uuid="81a911b6-a7f2-4357-8cc2-6895db0924a1">
+    <name>ДатаЗапуска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата запуска прогона</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>DateTime</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ba5c5fd1-f935-450f-9c0f-42dd2356c5ea">
+    <name>Провайдер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Провайдер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Провайдер API модели (например, Moonshot AI, Google AI Studio)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+</mdclass:InformationRegister>

@@ -42,20 +42,26 @@
   <styleItems>StyleItem.KimiЦветМодели</styleItems>
   <styleItems>StyleItem.KimiЦветПользователя</styleItems>
   <commonModules>CommonModule.KimiAPIСервер</commonModules>
+  <commonModules>CommonModule.KimiМоделиСервер</commonModules>
   <commonModules>CommonModule.KimiРассуждениеСервер</commonModules>
   <commonModules>CommonModule.KimiТемператураСервер</commonModules>
+  <commonCommands>CommonCommand.KimiМодели</commonCommands>
   <commonCommands>CommonCommand.KimiРассуждение</commonCommands>
   <commonCommands>CommonCommand.KimiТемпература</commonCommands>
   <commonCommands>CommonCommand.KimiЧат</commonCommands>
+  <constants>Constant.GeminiApiKey</constants>
   <constants>Constant.KimiApiKey</constants>
   <catalogs>Catalog.KimiЗадачиГенерации</catalogs>
   <catalogs>Catalog.KimiЗадачиРассуждений</catalogs>
   <enums>Enum.KimiСпособыРассуждения</enums>
   <enums>Enum.KimiУсилиеРассуждения</enums>
+  <reports>Report.KimiИтогиМоделей</reports>
   <reports>Report.KimiРезультатыРассуждений</reports>
+  <dataProcessors>DataProcessor.KimiМодели</dataProcessors>
   <dataProcessors>DataProcessor.KimiРассуждение</dataProcessors>
   <dataProcessors>DataProcessor.KimiТемпература</dataProcessors>
   <dataProcessors>DataProcessor.KimiЧат</dataProcessors>
+  <informationRegisters>InformationRegister.РезультатыМоделейKimi</informationRegisters>
   <informationRegisters>InformationRegister.РезультатыРассужденийKimi</informationRegisters>
   <informationRegisters>InformationRegister.РезультатыТемпературыKimi</informationRegisters>
 </mdclass:Configuration>
