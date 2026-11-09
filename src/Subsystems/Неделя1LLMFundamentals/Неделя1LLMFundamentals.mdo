@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3a3e7f68-ef5e-4500-bdae-66e85b907f82">
+  <name>Неделя1LLMFundamentals</name>
+  <synonym>
+    <key>ru</key>
+    <value>LLM Fundamentals</value>
+  </synonym>
+  <comment>Первая неделя курса (Дни 1–5): чат с историей, формат ответа, способы рассуждения, температура, версии моделей</comment>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>CommonCommand.KimiМодели</content>
+  <content>CommonCommand.KimiРассуждение</content>
+  <content>CommonCommand.KimiТемпература</content>
+  <content>CommonCommand.KimiЧат</content>
+</mdclass:Subsystem>
