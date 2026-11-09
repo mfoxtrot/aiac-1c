@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="23b207fd-9bbd-4649-850c-4348f6ac4df1">
+  <producedTypes>
+    <managerType typeId="9dd63fb8-909e-4e31-895b-52cc4cbfec47" valueTypeId="c0418051-46af-4a77-afdd-e4b3e1c47ad1"/>
+    <valueManagerType typeId="12055f6e-f86b-4217-ae6b-f559de9b9368" valueTypeId="73d0f588-7d54-483d-9bc9-3fd2914272ae"/>
+    <valueKeyType typeId="3cd61556-fe31-44bb-9759-42fddd512f57" valueTypeId="81ae3d07-221e-41b1-bb8b-6b38217c4de8"/>
+  </producedTypes>
+  <name>GeminiApiKey</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ключ API Gemini</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>250</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <passwordMode>true</passwordMode>
+  <toolTip>
+    <key>ru</key>
+    <value>Ключ доступа к Gemini API (Google AI Studio, aistudio.google.com) — "малая" модель эксперимента сравнения версий моделей. Заполняется в режиме 1С:Предприятие; бесплатный тариф допустим (лимиты: gemini-2.5-flash-lite — 1500 запросов в день).</value>
+  </toolTip>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

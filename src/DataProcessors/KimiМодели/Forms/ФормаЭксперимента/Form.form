@@ -245,7 +245,7 @@
         <titleLocation>Left</titleLocation>
         <toolTip>
           <key>ru</key>
-          <value>Малая дешёвая модель эксперимента; ключ API — константа "Ключ API Groq" (бесплатный тариф допустим)</value>
+          <value>Малая дешёвая модель эксперимента; ключ API — константа "Ключ API Gemini" (бесплатный тариф: aistudio.google.com)</value>
         </toolTip>
         <toolTipRepresentation>Button</toolTipRepresentation>
         <extendedTooltip>

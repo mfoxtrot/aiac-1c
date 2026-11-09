@@ -49,7 +49,7 @@
   <commonCommands>CommonCommand.KimiРассуждение</commonCommands>
   <commonCommands>CommonCommand.KimiТемпература</commonCommands>
   <commonCommands>CommonCommand.KimiЧат</commonCommands>
-  <constants>Constant.GroqApiKey</constants>
+  <constants>Constant.GeminiApiKey</constants>
   <constants>Constant.KimiApiKey</constants>
   <catalogs>Catalog.KimiЗадачиГенерации</catalogs>
   <catalogs>Catalog.KimiЗадачиРассуждений</catalogs>

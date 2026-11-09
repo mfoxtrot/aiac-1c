@@ -214,13 +214,16 @@ src/
   `kimi-k3.1-pro-highspeed` — 4.00/20.00, `kimi-k3` — 3.00/15.00.
 - Кросс-провайдерные вызовы (День 5): `ВыполнитьЗапрос` принимает служебные параметры
   `АдресСервера` / `БазовыйПуть` / `КлючAPI`; OpenAI-совместимый провайдер отличается
-  только ими. Groq: адрес `api.groq.com`, базовый путь `/openai/v1`, ключ — константа
-  `GroqApiKey` (бесплатный tier: console.groq.com). Каталог Groq на 2026-11-09:
-  production-модели `openai/gpt-oss-20b` ($0.075/$0.30 за 1M) и `openai/gpt-oss-120b`
-  ($0.15/$0.60), лимиты Developer plan — 1K RPM / 250K TPM; `llama-3.1-8b-instant`
-  и `llama-3.3-70b-versatile` переведены в Enterprise (sunset 2026-08-16) — для
-  бесплатного ключа ошибка 404 «does not exist or you do not have access», читается как
-  опечатка или отсутствие прав, но модель просто закрыта (hotfix 2 Дня 5).
+  только ими. Малый ярус — Google AI Studio: адрес `generativelanguage.googleapis.com`,
+  базовый путь `/v1beta/openai`, ключ — константа `GeminiApiKey` (бесплатный тариф:
+  aistudio.google.com; `gemini-2.5-flash-lite` — 30 RPM / 1500 запросов в день,
+  `gemini-2.5-flash` — 15 RPM / 1500 в день; платный прайс $0.075/$0.30 и $0.15/$0.60
+  за 1M вход/выход — нужен для расчёта «рыночной» стоимости и отношения к флагману).
+  История провайдера: Groq (`api.groq.com` + `/openai/v1`) — его llama-модели переведены
+  в Enterprise (sunset 2026-08-16), для бесплатных ключей ошибка 404 «does not exist or
+  you do not have access», читается как опечатка/права, но модель просто закрыта (hotfix 2
+  Дня 5); gpt-oss-* у Groq доступны на Developer plan с лимитами, но заказчик выбрал
+  классически бесплатный тариф AI Studio.
   Для сторонних моделей не передавать Kimi-специфичные поля (`reasoning_effort` и пр.) —
   ошибка 400.
 - Проверка доступных моделей для конкретного ключа: `GET /v1/models`.

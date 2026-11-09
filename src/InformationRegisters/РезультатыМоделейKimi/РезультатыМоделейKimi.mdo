@@ -259,7 +259,7 @@
     </synonym>
     <toolTip>
       <key>ru</key>
-      <value>Расчётная стоимость вызова по тарифам провайдера (см. KimiМоделиСервер.ЦенаМодели); для бесплатного тарифа Groq считается по ценам платного тарифа</value>
+      <value>Расчётная стоимость вызова по тарифам провайдера (см. KimiМоделиСервер.ЦенаМодели); для бесплатного тарифа Google AI Studio считается по ценам платного тарифа</value>
     </toolTip>
     <type>
       <types>Number</types>
@@ -398,7 +398,7 @@
     </type>
     <toolTip>
       <key>ru</key>
-      <value>Провайдер API модели (например, Moonshot AI, Groq)</value>
+      <value>Провайдер API модели (например, Moonshot AI, Google AI Studio)</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
