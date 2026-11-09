@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="650ec332-9029-4d2b-aab1-75a7f6e91944">
+  <producedTypes>
+    <refType typeId="2af1cb87-3144-4af4-90db-bfb5159d68d5" valueTypeId="b2f2948a-186d-4fcb-8a39-ba520d79f049"/>
+    <listType typeId="e58a5fa6-9e63-4059-82f6-639fb71cf061" valueTypeId="264a2d97-e654-4f5a-b988-a4b5eb40037c"/>
+    <managerType typeId="d2decf5c-ddb9-4a5f-9e6e-4b3507a8d5aa" valueTypeId="b09b3691-31f7-412e-adc0-457c99751008"/>
+  </producedTypes>
+  <name>KimiСпособыРассуждения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Способы рассуждения Kimi</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="f7ef320b-99a2-43ec-9a4e-c6fbdb895c66">
+    <name>ПрямойОтвет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Прямой ответ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="da038ed0-de40-4c1b-886a-9dc290a0cdd0">
+    <name>Пошагово</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пошагово</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e0186a22-b667-41da-b2c1-1d37acaab43c">
+    <name>Самопромпт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Самопромпт</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c2a54ec6-047c-4716-8aee-e7bebc713f8d">
+    <name>Эксперты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа экспертов</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

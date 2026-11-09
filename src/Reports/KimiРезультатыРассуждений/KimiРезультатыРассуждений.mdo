@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a00edcce-2e50-404d-8cfc-8c43e9799379">
+  <producedTypes>
+    <objectType typeId="01edd963-427c-4525-a224-abd34fdef985" valueTypeId="1c0e2bf4-0f08-4468-bf54-9cea13f0a18c"/>
+    <managerType typeId="346c6f64-5c8b-47e0-8f2c-8a161ef527e2" valueTypeId="f7bda02b-2068-4fb7-bf9a-b82091f50b7e"/>
+  </producedTypes>
+  <name>KimiРезультатыРассуждений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Результаты рассуждений Kimi</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.KimiРезультатыРассуждений.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="b05fccff-1b7c-47a7-80c0-03d8c0598712">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f157c34e-ce6c-49af-8fe7-0e18931ce31c">
+  <name>KimiРассуждение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Способы рассуждения Kimi</value>
+  </synonym>
+  <group>NavigationPanelOrdinary</group>
+  <commandParameterType/>
+  <representation>Auto</representation>
+  <toolTip>
+    <key>ru</key>
+    <value>Открывает эксперимент: задачи с известными ответами решаются четырьмя способами промптинга при минимальном и максимальном рассуждении</value>
+  </toolTip>
+</mdclass:CommonCommand>

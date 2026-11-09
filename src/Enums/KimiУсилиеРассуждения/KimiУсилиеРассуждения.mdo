@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2aafedc9-faf1-4e14-8f77-ea48537b2280">
+  <producedTypes>
+    <refType typeId="e2e9d9ed-dc5c-4818-8276-4c1b1af3e3aa" valueTypeId="5b5af7f0-9bec-431b-b014-f4f1a296348f"/>
+    <listType typeId="6e8a7aec-88be-4e4c-a077-13384e630958" valueTypeId="c271c481-d940-4304-8dd7-413fb80aeabb"/>
+    <managerType typeId="9509e3a4-4987-455e-a198-cd54f841a7ee" valueTypeId="9e026263-06ae-47cd-850c-7ab8973aec07"/>
+  </producedTypes>
+  <name>KimiУсилиеРассуждения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Усилие рассуждения Kimi</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="eb80840a-e893-4d15-82ef-ffef833d239f">
+    <name>low</name>
+    <synonym>
+      <key>ru</key>
+      <value>Минимальное (low)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6cc35a12-0543-4013-843c-c2911b36a765">
+    <name>max</name>
+    <synonym>
+      <key>ru</key>
+      <value>Максимальное (max)</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>
