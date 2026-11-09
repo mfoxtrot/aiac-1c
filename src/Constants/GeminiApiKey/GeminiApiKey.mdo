@@ -20,7 +20,7 @@
   <passwordMode>true</passwordMode>
   <toolTip>
     <key>ru</key>
-    <value>Ключ доступа к Gemini API (Google AI Studio, aistudio.google.com) — "малая" модель эксперимента сравнения версий моделей. Заполняется в режиме 1С:Предприятие; бесплатный тариф допустим (лимиты: gemini-2.5-flash-lite — 1500 запросов в день).</value>
+    <value>Ключ доступа к Gemini API (Google AI Studio, aistudio.google.com) — "малая" модель эксперимента сравнения версий моделей. Заполняется в режиме 1С:Предприятие; бесплатный тариф допустим (лимиты: gemini-3.5-flash-lite — 500 запросов в день).</value>
   </toolTip>
   <minValue xsi:type="core:UndefinedValue"/>
   <maxValue xsi:type="core:UndefinedValue"/>
