@@ -268,15 +268,14 @@
       <value>Температура</value>
     </synonym>
     <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>3</precision>
-        <scale>1</scale>
-      </numberQualifiers>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
     </type>
     <toolTip>
       <key>ru</key>
-      <value>Значение параметра temperature запроса; -1 - параметр не передавался (контрольный прогон)</value>
+      <value>Значение параметра temperature запроса ("не задана" - контрольный прогон без параметра). Строковый тип: числовое измерение не может хранить 0 - платформа считает его пустым значением</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -284,8 +283,8 @@
     <denyIncompleteValues>true</denyIncompleteValues>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:NumberValue">
-      <value>0</value>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
     </fillValue>
   </dimensions>
   <dimensions uuid="cc3941d1-4be5-4463-8f6d-7f88dccd88a0">
