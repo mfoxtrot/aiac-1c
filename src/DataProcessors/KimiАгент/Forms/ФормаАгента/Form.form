@@ -42,7 +42,6 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <readOnly>true</readOnly>
     <editMode>Enter</editMode>
     <showInHeader>false</showInHeader>
     <showInFooter>false</showInFooter>
@@ -55,7 +54,7 @@
       <multiLine>true</multiLine>
       <chooseType>true</chooseType>
       <typeDomainEnabled>true</typeDomainEnabled>
-      <textEdit>false</textEdit>
+      <textEdit>true</textEdit>
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
