@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d6e3e8a8-0465-4bc3-adf7-f3e4bb0d8cca">
+  <name>KimiТемпература</name>
+  <synonym>
+    <key>ru</key>
+    <value>Температура ответов Kimi</value>
+  </synonym>
+  <group>NavigationPanelOrdinary</group>
+  <commandParameterType/>
+  <representation>Auto</representation>
+  <toolTip>
+    <key>ru</key>
+    <value>Открывает эксперимент: задачи двух типов решаются при temperature 0 / 0.7 / 1.2 по нескольку попыток; выводы по результатам формирует модель-аналитик</value>
+  </toolTip>
+</mdclass:CommonCommand>

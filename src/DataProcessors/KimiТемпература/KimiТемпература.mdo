@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a85e676c-b6dc-4b00-b4b5-6411b8035148">
+  <producedTypes>
+    <objectType typeId="3db77339-01f3-4c71-b39f-e8d695adeca7" valueTypeId="19621db6-9f09-4b81-aab9-222c17ba909f"/>
+    <managerType typeId="1756273b-dff1-4d0d-8cf3-5b9289730d14" valueTypeId="03931f8b-9546-4587-8086-306fbb5b2a77"/>
+  </producedTypes>
+  <name>KimiТемпература</name>
+  <synonym>
+    <key>ru</key>
+    <value>Температура ответов Kimi</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.KimiТемпература.Form.ФормаЭксперимента</defaultForm>
+  <forms uuid="dd1ef435-d1cc-4034-ad2b-b64be451e8e3">
+    <name>ФормаЭксперимента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма эксперимента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+  </forms>
+</mdclass:DataProcessor>
