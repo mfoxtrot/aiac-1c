@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="04ca3415-718f-4554-9bbd-32dec7705175">
+  <name>KimiТемператураСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Kimi температура сервер</value>
+  </synonym>
+  <server>true</server>
+  <serverCall>true</serverCall>
+</mdclass:CommonModule>
