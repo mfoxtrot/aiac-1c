@@ -55,7 +55,8 @@
 
 // Пересобирает HTML чата из истории диалога: каждое сообщение — «пузырь» с рамкой
 // и скруглением, сообщения пользователя прижаты вправо, модели — влево,
-// внизу пузыря мелкая метка с датой и временем.
+// внизу пузыря мелкая метка с датой и временем. Сообщения выводятся в обратном
+// порядке (новые первыми в разметке) — контейнер column-reverse показывает их снизу.
 //
 &НаКлиенте
 Процедура ОбновитьЧат()
@@ -63,29 +64,35 @@
 	ЧастиHTML = Новый Массив;
 	ЧастиHTML.Добавить(ЗаголовокHTMLЧата());
 
-	Для Каждого СтрокаИстории Из История Цикл
-		ЧастиHTML.Добавить(БлокСообщенияHTML(СтрокаИстории));
+	Индекс = История.Количество() - 1;
+	Пока Индекс >= 0 Цикл
+		ЧастиHTML.Добавить(БлокСообщенияHTML(История[Индекс]));
+		Индекс = Индекс - 1;
 	КонецЦикла;
 
-	ЧастиHTML.Добавить("</body></html>");
+	ЧастиHTML.Добавить("</div></body></html>");
 
 	ЧатHTML = СтрСоединить(ЧастиHTML, Символы.ПС);
 
 КонецПроцедуры
 
-// Возвращает шапку HTML-чата: оформление «пузырей» сообщений и скрипт автоскролла
-// к последнему сообщению (выполняется при каждой перезагрузке документа в поле).
+// Возвращает шапку HTML-чата: оформление «пузырей» сообщений и контейнер ленты.
+// Автоскролл к последнему сообщению — без JavaScript (сценарии в HTML-поле не выполняются):
+// контейнер flex с column-reverse открывается у низа, поэтому сообщения добавляются
+// в обратном порядке (новые первыми в разметке — визуально внизу).
 //
 // Возвращаемое значение:
-//   Строка - HTML с открывающими тегами html/head/body и блоком style.
+//   Строка - HTML с открывающими тегами html/head/body, блоком style и контейнером ленты.
 //
 &НаКлиенте
 Функция ЗаголовокHTMLЧата()
 
 	Возврат
 	"<html><head><style>
-	|body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; font-size: 13px; margin: 6px; background: #ffffff; }
-	|.msg { margin: 6px 0; }
+	|html, body { height: 100%; margin: 0; padding: 0; }
+	|body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; font-size: 13px; background: #ffffff; }
+	|#chat { height: 100%; overflow-y: auto; display: flex; flex-direction: column-reverse; }
+	|.msg { margin: 6px; }
 	|.user { text-align: right; }
 	|.bot { text-align: left; }
 	|.bubble { display: inline-block; text-align: left; max-width: 75%; padding: 6px 10px;
@@ -96,8 +103,7 @@
 	|.user .author { color: #1b5e20; }
 	|.bot .author { color: #123a6d; }
 	|.time { font-size: 10px; color: #888888; margin-top: 3px; text-align: right; }
-	|</style></head>
-	|<body onload=""window.scrollTo(0, document.body.scrollHeight);"">";
+	|</style></head><body><div id=""chat"">";
 
 КонецФункции
 
