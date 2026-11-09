@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a9a92606-b296-4f1a-8795-2f18ff02b390">
+  <producedTypes>
+    <objectType typeId="452e91a7-af0a-46d5-b633-dde84e80a5d0" valueTypeId="9686a0ac-7859-4ecd-88e9-2c2d821fa604"/>
+    <managerType typeId="6a5c8366-a88e-4bb2-9d92-456071bdbf27" valueTypeId="08385017-d7a1-4ca4-a578-736e143ae6ab"/>
+  </producedTypes>
+  <name>KimiМодели</name>
+  <synonym>
+    <key>ru</key>
+    <value>Версии моделей Kimi</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.KimiМодели.Form.ФормаЭксперимента</defaultForm>
+  <forms uuid="27c59fbe-c25f-43e4-afa5-8da8eb807d3e">
+    <name>ФормаЭксперимента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма эксперимента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+  </forms>
+</mdclass:DataProcessor>
