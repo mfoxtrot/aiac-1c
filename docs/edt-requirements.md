@@ -76,6 +76,21 @@ src/
   пишет всегда; далее `codeLength`, `descriptionLength`, `levelCount` и реквизиты
   в `attributes` (после `quickChoice`/`choiceMode`). Строка без ограничения — пустой
   `<stringQualifiers/>`.
+- **Документ** (первый в проекте — День 7; структура выверена по ecore-метамодели
+  `mdclass`, извлечённой из jar плагинов EDT `com._1c.g5.v8.dt.metadata/model/MdClass.xcore`):
+  корень `mdclass:Document`; `producedTypes` — 5 пар UUID (objectType, refType,
+  selectionType, listType, managerType — как у справочника), пишется **первым блоком,
+  до name/synonym**; стандартные атрибуты документа — блоки `standardAttributes`
+  (порядок как у справочника: dataHistory, name, fillValue..., minValue/maxValue;
+  набор для непроводимого: Date, Number, DeletionMark, Ref; Posted у непроводимых нет);
+  свои свойства после общих: numberType (по умолчанию String), numberLength,
+  numberAllowedLength, numberPeriodicity, checkUnique, autonumbering, `posting`
+  (`Deny` — непроводимый); далее `attributes`, `tabularSections`; начало общения —
+  стандартная Дата документа (при перезаписях объект сохраняет её, если не менять).
+  **Табличная часть**: `tabularSections uuid="..."` с собственным `producedTypes`
+  из 2 пар (objectType, rowType), стандартный атрибут LineNumber, реквизиты — блоки
+  `attributes` с индивидуальными uuid; порядок = НомерСтроки. Модули объектов
+  документу не нужны (объектный/менеджер — ExternalProperty, не пишутся).
 - **Регистр сведений** (независимый, непериодический): `producedTypes` — 7 пар
   UUID (selectionType, listType, managerType, recordSetType, recordKeyType,
   recordType, recordManagerType); `standardAttributes` — Active, LineNumber,
@@ -242,6 +257,21 @@ src/
   Табличный документ для этого отвергнут: рамки только прямоугольные (скругления нет), ширина
   колонок фиксирована (контент «зажат» при растягивании окна) — построитель областей
   и реквизит удалены.
+- **HTML-навигация внутри формы (День 7)** — лента чатов как список ссылок на HTML-поле
+  (вместо «по-1С-ного» табличного поля): карточки — `<a href="chat:<ид>">` с псевдо-схемой,
+  платформенная навигация отменяется. Событие «ПриНажатии» HTML-поля — модельное имя
+  **`OnClick`**, блок `<handlers>` пишется **внутри `HtmlFieldExtInfo` (extInfo)**, до width/height
+  (эталон — штатный шаблон формы поиска в jar `com._1c.g5.v8.dt.form/resources/templates`);
+  адрес ссылки читается из `ДанныеСобытия.Element.href` — обязательно в Попытка: состав DOM
+  зависит от движка HTML-поля (защитно принимаем и строку вторым параметром). У псевдо-ссылок
+  следить за пересечением маркеров (схема одна: `chat:<ид>`, служебный ид `new`).
+- **Типы ссылок в Form.form (День 7)**: ссылочные колонки реквизитов формы —
+  `DocumentRef.<Имя>` для документов (по аналогии с `CatalogRef.<Имя>`); ссылочные реквизиты
+  формы держат и пустую ссылку (`Документы.X.ПустаяСсылка()` на сервере) — для сброса
+  «текущего» объекта удобнее, чем Неопределено.
+- **Кнопки-команды формы**: при переименовании команды правим три места — `formCommands`,
+  кнопку (`commandName` + `name`) и имя обработчика в модуле; ид элементов у новых
+  объектов формы берём из свободного диапазона (100+).
 
 ## Kimi API
 

@@ -49,6 +49,7 @@
   <commonModules>CommonModule.KimiМоделиСервер</commonModules>
   <commonModules>CommonModule.KimiРассуждениеСервер</commonModules>
   <commonModules>CommonModule.KimiТемператураСервер</commonModules>
+  <commonModules>CommonModule.KimiЧатыАгентаСервер</commonModules>
   <commonCommands>CommonCommand.KimiАгент</commonCommands>
   <commonCommands>CommonCommand.KimiМодели</commonCommands>
   <commonCommands>CommonCommand.KimiРассуждение</commonCommands>
@@ -58,6 +59,7 @@
   <constants>Constant.KimiApiKey</constants>
   <catalogs>Catalog.KimiЗадачиГенерации</catalogs>
   <catalogs>Catalog.KimiЗадачиРассуждений</catalogs>
+  <documents>Document.KimiДиалог</documents>
   <enums>Enum.KimiСпособыРассуждения</enums>
   <enums>Enum.KimiУсилиеРассуждения</enums>
   <reports>Report.KimiИтогиМоделей</reports>

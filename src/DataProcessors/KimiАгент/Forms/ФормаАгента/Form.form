@@ -8,8 +8,151 @@
     <name>ГруппаКолонки</name>
     <id>70</id>
     <items xsi:type="form:FormGroup">
+      <name>ГруппаЧаты</name>
+      <id>100</id>
+      <items xsi:type="form:FormField">
+        <name>СписокЧатов</name>
+        <id>101</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>СписокЧатовHTML</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <extendedTooltip>
+          <name>СписокЧатовРасширеннаяПодсказка</name>
+          <id>106</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>СписокЧатовКонтекстноеМеню</name>
+          <id>104</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>HTMLDocumentField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>false</showInHeader>
+        <showInFooter>false</showInFooter>
+        <extInfo xsi:type="form:HtmlFieldExtInfo">
+          <handlers>
+            <event>OnClick</event>
+            <name>СписокЧатовПриНажатии</name>
+          </handlers>
+          <width>26</width>
+          <autoMaxWidth>false</autoMaxWidth>
+          <maxWidth>26</maxWidth>
+          <height>22</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <verticalStretch>true</verticalStretch>
+          <output>Disable</output>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Чаты</value>
+      </title>
+      <extendedTooltip>
+        <name>ГруппаЧатыРасширеннаяПодсказка</name>
+        <id>105</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
       <name>ГруппаЛевая</name>
       <id>71</id>
+      <items xsi:type="form:FormField">
+        <name>ЗаголовокТекущегоЧата</name>
+        <id>107</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ЗаголовокТекущегоЧата</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <extendedTooltip>
+          <name>ЗаголовокТекущегоЧатаРасширеннаяПодсказка</name>
+          <id>109</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ЗаголовокТекущегоЧатаКонтекстноеМеню</name>
+          <id>108</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <readOnly>true</readOnly>
+        <editMode>Enter</editMode>
+        <showInHeader>false</showInHeader>
+        <showInFooter>false</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>false</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>false</textEdit>
+        </extInfo>
+      </items>
       <items xsi:type="form:FormField">
         <name>Чат</name>
         <id>2</id>
@@ -554,7 +697,7 @@
           <representationInContextMenu>Auto</representationInContextMenu>
         </items>
         <items xsi:type="form:Button">
-          <name>ОчиститьДиалог</name>
+          <name>НовыйЧат</name>
           <id>18</id>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -563,7 +706,7 @@
           </userVisible>
           <skipOnInput>false</skipOnInput>
           <extendedTooltip>
-            <name>ОчиститьДиалогРасширеннаяПодсказка</name>
+            <name>НовыйЧатРасширеннаяПодсказка</name>
             <id>21</id>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -577,7 +720,7 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <commandName>Form.Command.ОчиститьДиалог</commandName>
+          <commandName>Form.Command.НовыйЧат</commandName>
           <representation>Auto</representation>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -785,6 +928,10 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
+  <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
   <group>Vertical</group>
@@ -874,6 +1021,44 @@
         <dateQualifiers>
           <dateFractions>DateTime</dateFractions>
         </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ВызовыИнструментов</name>
+      <title>
+        <key>ru</key>
+        <value>Вызовы инструментов</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ИдВызова</name>
+      <title>
+        <key>ru</key>
+        <value>Идентификатор вызова</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
       </valueType>
       <view>
         <common>true</common>
@@ -1069,6 +1254,149 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ТекущийЧат</name>
+    <title>
+      <key>ru</key>
+      <value>Текущий чат</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>DocumentRef.KimiДиалог</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ЗаголовокТекущегоЧата</name>
+    <title>
+      <key>ru</key>
+      <value>Заголовок чата</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Чаты</name>
+    <title>
+      <key>ru</key>
+      <value>Чаты</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Ссылка</name>
+      <title>
+        <key>ru</key>
+        <value>Диалог</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef.KimiДиалог</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Наименование</name>
+      <title>
+        <key>ru</key>
+        <value>Наименование</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Дата</name>
+      <title>
+        <key>ru</key>
+        <value>Начат</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Date</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ДатаЗавершения</name>
+      <title>
+        <key>ru</key>
+        <value>Завершён</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Date</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>СписокЧатовHTML</name>
+    <title>
+      <key>ru</key>
+      <value>Список чатов</value>
+    </title>
+    <id>11</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ОтправитьВопрос</name>
     <title>
@@ -1092,22 +1420,22 @@
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <formCommands>
-    <name>ОчиститьДиалог</name>
+    <name>НовыйЧат</name>
     <title>
       <key>ru</key>
-      <value>Очистить диалог</value>
+      <value>Новый чат</value>
     </title>
     <id>2</id>
     <toolTip>
       <key>ru</key>
-      <value>Очистить историю диалога и журнал работы агента</value>
+      <value>Завершить текущий диалог (сохранить его) и начать новый</value>
     </toolTip>
     <use>
       <common>true</common>
     </use>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
-        <name>ОчиститьДиалог</name>
+        <name>НовыйЧат</name>
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
