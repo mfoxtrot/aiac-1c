@@ -49,6 +49,7 @@
   <commonModules>CommonModule.KimiМоделиСервер</commonModules>
   <commonModules>CommonModule.KimiРассуждениеСервер</commonModules>
   <commonModules>CommonModule.KimiТемператураСервер</commonModules>
+  <commonModules>CommonModule.KimiТокеныСервер</commonModules>
   <commonModules>CommonModule.KimiЧатыАгентаСервер</commonModules>
   <commonCommands>CommonCommand.KimiАгент</commonCommands>
   <commonCommands>CommonCommand.KimiМодели</commonCommands>

@@ -96,6 +96,29 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="878fa778-befd-433e-8e85-1886743573c6">
+    <name>ТокеныИтого</name>
+    <synonym>
+      <key>ru</key>
+      <value>Токены итого</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>0</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Сумма токенов по сообщениям диалога (вес истории): у ассистента — фактические completion_tokens ответа, у пользователя и инструментов — локальная оценка текста</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="95be1337-7ba9-4202-bb6a-4cc50a70a6e9">
     <producedTypes>
       <objectType typeId="f4c6ff30-4c62-4d4e-93fb-5c9732f69104" valueTypeId="2ad2df71-3096-4df2-975c-f150daa854c4"/>
@@ -210,6 +233,29 @@
           <dateFractions>DateTime</dateFractions>
         </dateQualifiers>
       </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="24b1f5b2-772f-42cd-bc1c-5f34b35ed06e">
+      <name>Токены</name>
+      <synonym>
+        <key>ru</key>
+        <value>Токены</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>0</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Токены, потраченные на сообщение: у ассистента — фактические completion_tokens ответа (из usage API), у пользователя и инструментов — локальная оценка текста</value>
+      </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <fullTextSearch>Use</fullTextSearch>
