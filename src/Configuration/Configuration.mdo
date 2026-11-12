@@ -46,6 +46,7 @@
   <commonModules>CommonModule.KimiAPIСервер</commonModules>
   <commonModules>CommonModule.KimiАгентИнструменты</commonModules>
   <commonModules>CommonModule.KimiАгентСервер</commonModules>
+  <commonModules>CommonModule.KimiКонтекстСервер</commonModules>
   <commonModules>CommonModule.KimiМоделиСервер</commonModules>
   <commonModules>CommonModule.KimiРассуждениеСервер</commonModules>
   <commonModules>CommonModule.KimiТемператураСервер</commonModules>
