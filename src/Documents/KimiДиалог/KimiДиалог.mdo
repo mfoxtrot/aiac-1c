@@ -187,6 +187,48 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="36093640-39fc-48ff-bf35-ed494b895324">
+    <name>СтратегияКонтекста</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стратегия контекста</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Управление контекстом (День 10): "Полный" — вся история в запрос, "Окно" — последние N сообщений, "Факты" — блок ключ-значение + последние N, "Сводка" — сводка сжатой части + последние N (День 9). Пусто — полная история</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2c45021d-d637-4114-ad93-a3642de701bc">
+    <name>ВеткаОт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ветка от</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.KimiДиалог</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Исходный диалог, от которого создана эта ветка (ветвление диалога, День 10); пусто — корневой диалог</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="95be1337-7ba9-4202-bb6a-4cc50a70a6e9">
     <producedTypes>
       <objectType typeId="f4c6ff30-4c62-4d4e-93fb-5c9732f69104" valueTypeId="2ad2df71-3096-4df2-975c-f150daa854c4"/>
@@ -326,6 +368,63 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="6313a5e9-68b3-433a-8b39-b68ca65133ff">
+    <producedTypes>
+      <objectType typeId="e07693e6-d927-41e5-bcb8-d5d4c5a06a41" valueTypeId="c8d09799-4d9e-4bf0-a1e3-130b75d27493"/>
+      <rowType typeId="341ef84b-a5b7-4eee-818d-c86b6e4ca2b2" valueTypeId="74ce31bf-90e5-4ebd-bfad-baf0cc3b5652"/>
+    </producedTypes>
+    <name>Факты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Факты</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="e7c49a89-051d-419a-8519-03d627afd6ef">
+      <name>Ключ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ключ</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="1d293cb1-f66f-4b62-8594-ac4404068e0a">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
       <fullTextSearch>Use</fullTextSearch>
       <dataHistory>Use</dataHistory>
     </attributes>
