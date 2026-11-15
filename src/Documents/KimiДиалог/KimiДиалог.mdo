@@ -119,6 +119,74 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="575fdae0-56f2-4e1b-a678-d8e9bb9c3224">
+    <name>Сводка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сводка</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Сводка сжатой части диалога (генерируется моделью, День 9): в запрос API вместо первых СжатоДо сообщений истории подставляется этот текст</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e20d4632-709d-4300-84fc-982d5d43d40b">
+    <name>СжатоДо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сжато до</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>0</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Сколько первых сообщений табличной части заменены в запросах сводкой (управление контекстом, День 9)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="107770ad-010d-43f7-a154-e4c8b247d602">
+    <name>ХвостСообщений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хвост, сообщений</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>0</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Сколько последних сообщений истории передаются в запрос как есть, без сжатия (День 9)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="95be1337-7ba9-4202-bb6a-4cc50a70a6e9">
     <producedTypes>
       <objectType typeId="f4c6ff30-4c62-4d4e-93fb-5c9732f69104" valueTypeId="2ad2df71-3096-4df2-975c-f150daa854c4"/>
