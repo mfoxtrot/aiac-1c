@@ -1842,6 +1842,32 @@
               <placementArea>UserCmds</placementArea>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
+            <items xsi:type="form:Button">
+              <name>ОценитьОтветы</name>
+              <id>373</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <skipOnInput>false</skipOnInput>
+              <extendedTooltip>
+                <name>ОценитьОтветыРасширеннаяПодсказка</name>
+                <id>374</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.ОценитьОтветы</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -1949,6 +1975,46 @@
               <contextMenu>
                 <name>ПроверкаВопросКонтекстноеМеню</name>
                 <id>193</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <readOnly>true</readOnly>
+              <editMode>Enter</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
+              <name>ПроверкаЭталон</name>
+              <id>375</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>ПроверкаДеталей.Эталон</segments>
+              </dataPath>
+              <extendedTooltip>
+                <name>ПроверкаЭталонРасширеннаяПодсказка</name>
+                <id>376</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>ПроверкаЭталонКонтекстноеМеню</name>
+                <id>377</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>InputField</type>
@@ -3867,6 +3933,26 @@
         <common>true</common>
       </edit>
     </columns>
+    <columns>
+      <name>Эталон</name>
+      <title>
+        <key>ru</key>
+        <value>Эталон</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
   </attributes>
   <formCommands>
     <name>ОтправитьВопрос</name>
@@ -4096,6 +4182,27 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ОстановитьПрогон</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ОценитьОтветы</name>
+    <title>
+      <key>ru</key>
+      <value>Оценить ответы</value>
+    </title>
+    <id>12</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Сверить ответы агента с эталонами простой моделью (Google AI Studio) и автоматически проставить отметки «Помнит»; отметки можно править вручную</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОценитьОтветы</name>
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
