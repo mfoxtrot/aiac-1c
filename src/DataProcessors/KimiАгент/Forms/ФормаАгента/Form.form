@@ -2482,7 +2482,7 @@
             <representationInContextMenu>Auto</representationInContextMenu>
           </items>
           <items xsi:type="form:Button">
-            <name>ВыводыАналитика</name>
+            <name>ВыводыАналитикаКнопка</name>
             <id>358</id>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -2491,7 +2491,7 @@
             </userVisible>
             <skipOnInput>false</skipOnInput>
             <extendedTooltip>
-              <name>ВыводыАналитикаРасширеннаяПодсказка</name>
+              <name>ВыводыАналитикаКнопкаРасширеннаяПодсказка</name>
               <id>359</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
