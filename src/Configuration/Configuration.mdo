@@ -41,6 +41,7 @@
   </languages>
   <subsystems>Subsystem.Неделя1LLMFundamentals</subsystems>
   <subsystems>Subsystem.Неделя2ПервыйАгент</subsystems>
+  <subsystems>Subsystem.Неделя3MemoryAndState</subsystems>
   <styleItems>StyleItem.KimiЦветМодели</styleItems>
   <styleItems>StyleItem.KimiЦветПользователя</styleItems>
   <commonModules>CommonModule.KimiAPIСервер</commonModules>
@@ -48,6 +49,7 @@
   <commonModules>CommonModule.KimiАгентСервер</commonModules>
   <commonModules>CommonModule.KimiКонтекстСервер</commonModules>
   <commonModules>CommonModule.KimiМоделиСервер</commonModules>
+  <commonModules>CommonModule.KimiПамятьСервер</commonModules>
   <commonModules>CommonModule.KimiРассуждениеСервер</commonModules>
   <commonModules>CommonModule.KimiТемператураСервер</commonModules>
   <commonModules>CommonModule.KimiТокеныСервер</commonModules>
@@ -61,7 +63,9 @@
   <constants>Constant.KimiApiKey</constants>
   <catalogs>Catalog.KimiЗадачиГенерации</catalogs>
   <catalogs>Catalog.KimiЗадачиРассуждений</catalogs>
+  <catalogs>Catalog.KimiФактыПамяти</catalogs>
   <documents>Document.KimiДиалог</documents>
+  <enums>Enum.KimiКатегорииПамяти</enums>
   <enums>Enum.KimiСпособыРассуждения</enums>
   <enums>Enum.KimiУсилиеРассуждения</enums>
   <reports>Report.KimiИтогиМоделей</reports>
