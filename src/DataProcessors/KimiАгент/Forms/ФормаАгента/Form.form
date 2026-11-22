@@ -1906,6 +1906,48 @@
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
           </items>
+          <items xsi:type="form:FormField">
+            <name>ЗапаснойПровайдерВключен</name>
+            <id>511</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ЗапаснойПровайдерВключен</segments>
+            </dataPath>
+            <titleLocation>Right</titleLocation>
+            <toolTip>
+              <key>ru</key>
+              <value>Резервный провайдер (hotfix при приёмке Дня 11): при перегрузке основного (HTTP 429/5xx, обрыв соединения) обмен автоматически повторяется на лёгкой модели Google AI Studio (gemini-3.5-flash-lite, бесплатный тариф); подмена фиксируется в журнале и статусе. В полном режиме формы выключен — чтобы прогоны Дня 10 не менялись молча</value>
+            </toolTip>
+            <toolTipRepresentation>Button</toolTipRepresentation>
+            <handlers>
+              <event>OnChange</event>
+              <name>ПамятьНастройкаПриИзменении</name>
+            </handlers>
+            <extendedTooltip>
+              <name>ЗапаснойПровайдерВключенРасширеннаяПодсказка</name>
+              <id>512</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ЗапаснойПровайдерВключенКонтекстноеМеню</name>
+              <id>513</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>CheckBoxField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -5977,6 +6019,23 @@
         <common>true</common>
       </edit>
     </columns>
+  </attributes>
+  <attributes>
+    <name>ЗапаснойПровайдерВключен</name>
+    <title>
+      <key>ru</key>
+      <value>Запасной Google при перегрузке Kimi</value>
+    </title>
+    <id>37</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
   </attributes>
   <formCommands>
     <name>ОтправитьВопрос</name>
