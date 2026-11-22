@@ -52,6 +52,7 @@
   <commonModules>CommonModule.KimiПамятьСервер</commonModules>
   <commonModules>CommonModule.KimiПерсонализацияСервер</commonModules>
   <commonModules>CommonModule.KimiРассуждениеСервер</commonModules>
+  <commonModules>CommonModule.KimiСостояниеЗадачиСервер</commonModules>
   <commonModules>CommonModule.KimiТемператураСервер</commonModules>
   <commonModules>CommonModule.KimiТокеныСервер</commonModules>
   <commonModules>CommonModule.KimiЧатыАгентаСервер</commonModules>
