@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7cc7217d-3c27-4337-97ae-919dce88d26b">
+  <name>KimiСостояниеЗадачиСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние задачи Kimi сервер</value>
+  </synonym>
+  <comment>Состояние задачи как конечный автомат (День 13): этапы (планирование → реализация → валидация → завершено, плюс отмена), разрешённые переходы, проверка перехода кодом до применения; инструменты агента task_set_stage/task_set_step; инъекция состояния в системный промпт; материал проверок (жизненный цикл с паузой, запрещённые переходы) и автооценка реакций лёгкой моделью</comment>
+  <server>true</server>
+</mdclass:CommonModule>
