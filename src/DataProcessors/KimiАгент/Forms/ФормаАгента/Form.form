@@ -723,8 +723,13 @@
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
           <group>Vertical</group>
+          <behavior>Collapsible</behavior>
+          <collapsed>true</collapsed>
+          <controlRepresentation>Picture</controlRepresentation>
+          <representation>NormalSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
+          <showTitle>true</showTitle>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
         </extInfo>
@@ -1096,66 +1101,111 @@
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
           <group>Vertical</group>
+          <behavior>Collapsible</behavior>
+          <collapsed>true</collapsed>
+          <controlRepresentation>Picture</controlRepresentation>
+          <representation>NormalSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
+          <showTitle>true</showTitle>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
-      <items xsi:type="form:FormField">
-        <name>СтатусОтвета</name>
-        <id>55</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>СтатусОтвета</segments>
-        </dataPath>
-        <titleLocation>None</titleLocation>
-        <extendedTooltip>
-          <name>СтатусОтветаРасширеннаяПодсказка</name>
-          <id>57</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаСводка</name>
+        <id>715</id>
+        <items xsi:type="form:FormField">
+          <name>СтатусОтвета</name>
+          <id>55</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>СтатусОтвета</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <extendedTooltip>
+            <name>СтатусОтветаРасширеннаяПодсказка</name>
+            <id>57</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СтатусОтветаКонтекстноеМеню</name>
+            <id>56</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <readOnly>true</readOnly>
+          <editMode>Enter</editMode>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <horizontalStretch>true</horizontalStretch>
+            <wrap>true</wrap>
           </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>СтатусОтветаКонтекстноеМеню</name>
-          <id>56</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <readOnly>true</readOnly>
-        <editMode>Enter</editMode>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <horizontalStretch>true</horizontalStretch>
-          <wrap>true</wrap>
-        </extInfo>
-      </items>
-      <items xsi:type="form:FormField">
-        <name>ТокеныПанель</name>
-        <id>150</id>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ТокеныПанель</name>
+          <id>150</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ТокеныПанель</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <toolTip>
+            <key>ru</key>
+            <value>Разбор токенов последнего обращения: оценка вопроса, фактические prompt/completion токены API, заполнение контекстного окна и расчётная стоимость</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ТокеныПанельРасширеннаяПодсказка</name>
+            <id>152</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ТокеныПанельКонтекстноеМеню</name>
+            <id>151</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <readOnly>true</readOnly>
+          <editMode>Enter</editMode>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <width>45</width>
+            <height>6</height>
+            <horizontalStretch>true</horizontalStretch>
+            <wrap>true</wrap>
+            <multiLine>true</multiLine>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+          </extInfo>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>ТокеныПанель</segments>
-        </dataPath>
-        <titleLocation>None</titleLocation>
-        <toolTip>
+        <title>
           <key>ru</key>
-          <value>Разбор токенов последнего обращения: оценка вопроса, фактические prompt/completion токены API, заполнение контекстного окна и расчётная стоимость</value>
-        </toolTip>
+          <value>Сводка</value>
+        </title>
         <extendedTooltip>
-          <name>ТокеныПанельРасширеннаяПодсказка</name>
-          <id>152</id>
+          <name>ГруппаСводкаРасширеннаяПодсказка</name>
+          <id>716</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -1163,22 +1213,18 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <contextMenu>
-          <name>ТокеныПанельКонтекстноеМеню</name>
-          <id>151</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <readOnly>true</readOnly>
-        <editMode>Enter</editMode>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <width>45</width>
-          <height>6</height>
-          <horizontalStretch>true</horizontalStretch>
-          <wrap>true</wrap>
-          <multiLine>true</multiLine>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <behavior>Collapsible</behavior>
+          <collapsed>true</collapsed>
+          <controlRepresentation>Picture</controlRepresentation>
+          <representation>WeakSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <showTitle>true</showTitle>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
@@ -1271,6 +1317,7 @@
         <extInfo xsi:type="form:UsualGroupExtInfo">
           <group>Vertical</group>
           <behavior>Collapsible</behavior>
+          <collapsed>true</collapsed>
           <controlRepresentation>Picture</controlRepresentation>
           <representation>NormalSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
@@ -1571,10 +1618,6 @@
             <segments>Факты</segments>
           </dataPath>
           <titleLocation>None</titleLocation>
-          <toolTip>
-            <key>ru</key>
-            <value>Память агента (стратегия «Факты», День 10): обновляется моделью после каждого обмена, редактируема вручную; уходит в запрос вместе с последними N сообщений</value>
-          </toolTip>
           <excludedCommands>Add</excludedCommands>
           <excludedCommands>Change</excludedCommands>
           <excludedCommands>Copy</excludedCommands>
@@ -1582,6 +1625,10 @@
           <excludedCommands>EndEdit</excludedCommands>
           <excludedCommands>MoveDown</excludedCommands>
           <excludedCommands>MoveUp</excludedCommands>
+          <toolTip>
+            <key>ru</key>
+            <value>Память агента (стратегия «Факты», День 10): обновляется моделью после каждого обмена, редактируема вручную; уходит в запрос вместе с последними N сообщений</value>
+          </toolTip>
           <items xsi:type="form:FormField">
             <name>ФактыКлюч</name>
             <id>322</id>
@@ -1726,6 +1773,7 @@
         <extInfo xsi:type="form:UsualGroupExtInfo">
           <group>Vertical</group>
           <behavior>Collapsible</behavior>
+          <collapsed>true</collapsed>
           <controlRepresentation>Picture</controlRepresentation>
           <representation>NormalSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
@@ -2007,7 +2055,6 @@
           </extendedTooltip>
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Horizontal</group>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
             <throughAlign>Auto</throughAlign>
@@ -2064,6 +2111,10 @@
           <items xsi:type="form:Table">
             <name>РабочаяПамять</name>
             <id>420</id>
+            <title>
+              <key>ru</key>
+              <value>Рабочая память (заметки задачи)</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2073,10 +2124,6 @@
               <segments>РабочаяПамять</segments>
             </dataPath>
             <titleLocation>Top</titleLocation>
-            <title>
-              <key>ru</key>
-              <value>Рабочая память (заметки задачи)</value>
-            </title>
             <toolTip>
               <key>ru</key>
               <value>Рабочая память (День 11): заметки текущей задачи «ключ-значение», хранятся в документе чата (ТЧ РабочаяПамять), попадают в запрос целиком, пока задача активна. Редактируйте в таблице и дополняйте кнопкой «В память из обмена»; пишутся в документ при сохранении чата</value>
@@ -2397,7 +2444,6 @@
             </extendedTooltip>
             <type>UsualGroup</type>
             <extInfo xsi:type="form:UsualGroupExtInfo">
-              <group>Horizontal</group>
               <showLeftMargin>true</showLeftMargin>
               <united>true</united>
               <throughAlign>Auto</throughAlign>
@@ -2407,6 +2453,10 @@
           <items xsi:type="form:Table">
             <name>ПредлагаемыеФакты</name>
             <id>445</id>
+            <title>
+              <key>ru</key>
+              <value>Предлагаемые из обмена (отметьте и сохраните в слой)</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2416,14 +2466,6 @@
               <segments>ПредлагаемыеФакты</segments>
             </dataPath>
             <titleLocation>Top</titleLocation>
-            <title>
-              <key>ru</key>
-              <value>Предлагаемые из обмена (отметьте и сохраните в слой)</value>
-            </title>
-            <toolTip>
-              <key>ru</key>
-              <value>Модель-экстрактор предлагает записи «ключ-значение» из последнего обмена (механизм фактов Дня 10): отметьте нужное и явно сохраните — в долговременную память (с выбранной категорией) или в рабочую память задачи</value>
-            </toolTip>
             <excludedCommands>Add</excludedCommands>
             <excludedCommands>Change</excludedCommands>
             <excludedCommands>Copy</excludedCommands>
@@ -2431,6 +2473,10 @@
             <excludedCommands>EndEdit</excludedCommands>
             <excludedCommands>MoveDown</excludedCommands>
             <excludedCommands>MoveUp</excludedCommands>
+            <toolTip>
+              <key>ru</key>
+              <value>Модель-экстрактор предлагает записи «ключ-значение» из последнего обмена (механизм фактов Дня 10): отметьте нужное и явно сохраните — в долговременную память (с выбранной категорией) или в рабочую память задачи</value>
+            </toolTip>
             <items xsi:type="form:FormField">
               <name>ПредлагаемыеБрать</name>
               <id>448</id>
@@ -2588,6 +2634,10 @@
           <items xsi:type="form:Table">
             <name>ПамятьФакты</name>
             <id>458</id>
+            <title>
+              <key>ru</key>
+              <value>Долговременная память (факты)</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2597,14 +2647,6 @@
               <segments>ПамятьФакты</segments>
             </dataPath>
             <titleLocation>Top</titleLocation>
-            <title>
-              <key>ru</key>
-              <value>Долговременная память (факты)</value>
-            </title>
-            <toolTip>
-              <key>ru</key>
-              <value>Долговременная память (День 11): факты справочника KimiФактыПамяти с категориями; пополняется явным действием «Сохранить в долговременную». В запрос попадают: профиль всегда, прочие категории — по релевантности словам вопроса</value>
-            </toolTip>
             <excludedCommands>Add</excludedCommands>
             <excludedCommands>Change</excludedCommands>
             <excludedCommands>Copy</excludedCommands>
@@ -2612,6 +2654,10 @@
             <excludedCommands>EndEdit</excludedCommands>
             <excludedCommands>MoveDown</excludedCommands>
             <excludedCommands>MoveUp</excludedCommands>
+            <toolTip>
+              <key>ru</key>
+              <value>Долговременная память (День 11): факты справочника KimiФактыПамяти с категориями; пополняется явным действием «Сохранить в долговременную». В запрос попадают: профиль всегда, прочие категории — по релевантности словам вопроса</value>
+            </toolTip>
             <items xsi:type="form:FormField">
               <name>ПамятьФактыКлюч</name>
               <id>461</id>
@@ -2731,7 +2777,6 @@
                 <textEdit>true</textEdit>
               </extInfo>
             </items>
-            <readOnly>true</readOnly>
             <commandBarLocation>None</commandBarLocation>
             <autoCommandBar>
               <name>ПамятьФактыКоманднаяПанель</name>
@@ -2753,6 +2798,7 @@
               <id>470</id>
               <autoFill>true</autoFill>
             </contextMenu>
+            <readOnly>true</readOnly>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
             <heightInTableRows>4</heightInTableRows>
@@ -2951,7 +2997,6 @@
             </extendedTooltip>
             <type>UsualGroup</type>
             <extInfo xsi:type="form:UsualGroupExtInfo">
-              <group>Horizontal</group>
               <showLeftMargin>true</showLeftMargin>
               <united>true</united>
               <throughAlign>Auto</throughAlign>
@@ -2961,6 +3006,10 @@
           <items xsi:type="form:Table">
             <name>ПроверкаПамяти</name>
             <id>484</id>
+            <title>
+              <key>ru</key>
+              <value>Проверка модели памяти (помнит / не помнит после очистки слоёв)</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2970,14 +3019,6 @@
               <segments>ПроверкаПамяти</segments>
             </dataPath>
             <titleLocation>Top</titleLocation>
-            <title>
-              <key>ru</key>
-              <value>Проверка модели памяти (помнит / не помнит после очистки слоёв)</value>
-            </title>
-            <toolTip>
-              <key>ru</key>
-              <value>Контрольные вопросы по данным каждого слоя (по два на слой). Колонки — этапы проверки: все слои заполнены, рабочая память очищена, новый чат (краткосрочная память сброшена), долговременная память очищена. Отметки проставляются автоматически сверкой с эталонами простой моделью и остаются редактируемыми</value>
-            </toolTip>
             <excludedCommands>Add</excludedCommands>
             <excludedCommands>Change</excludedCommands>
             <excludedCommands>Copy</excludedCommands>
@@ -2985,6 +3026,10 @@
             <excludedCommands>EndEdit</excludedCommands>
             <excludedCommands>MoveDown</excludedCommands>
             <excludedCommands>MoveUp</excludedCommands>
+            <toolTip>
+              <key>ru</key>
+              <value>Контрольные вопросы по данным каждого слоя (по два на слой). Колонки — этапы проверки: все слои заполнены, рабочая память очищена, новый чат (краткосрочная память сброшена), долговременная память очищена. Отметки проставляются автоматически сверкой с эталонами простой моделью и остаются редактируемыми</value>
+            </toolTip>
             <items xsi:type="form:FormField">
               <name>ПроверкаПамятиСлой</name>
               <id>487</id>
@@ -3320,6 +3365,7 @@
         <extInfo xsi:type="form:UsualGroupExtInfo">
           <group>Vertical</group>
           <behavior>Collapsible</behavior>
+          <collapsed>true</collapsed>
           <controlRepresentation>Picture</controlRepresentation>
           <representation>NormalSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
@@ -3452,7 +3498,6 @@
           </extendedTooltip>
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Horizontal</group>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
             <throughAlign>Auto</throughAlign>
@@ -3573,7 +3618,6 @@
           </extendedTooltip>
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Horizontal</group>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
             <throughAlign>Auto</throughAlign>
@@ -3583,6 +3627,10 @@
         <items xsi:type="form:Table">
           <name>ПредпочтенияПрофиля</name>
           <id>620</id>
+          <title>
+            <key>ru</key>
+            <value>Предпочтения активного профиля (редактируйте и «Сохранить профиль»)</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -3592,10 +3640,6 @@
             <segments>ПредпочтенияПрофиля</segments>
           </dataPath>
           <titleLocation>Top</titleLocation>
-          <title>
-            <key>ru</key>
-            <value>Предпочтения активного профиля (редактируйте и «Сохранить профиль»)</value>
-          </title>
           <toolTip>
             <key>ru</key>
             <value>Предпочтения профиля (День 12): аспект (Стиль / Детализация / Формат / Ограничение) и формулировка для модели. Пополняется вручную правкой таблицы и полуавтоматически кнопкой «Пополнить из диалога». Пишутся в справочник кнопкой «Сохранить профиль»</value>
@@ -3768,7 +3812,6 @@
           </extendedTooltip>
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Horizontal</group>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
             <throughAlign>Auto</throughAlign>
@@ -3778,6 +3821,10 @@
         <items xsi:type="form:Table">
           <name>ПредлагаемыеПредпочтения</name>
           <id>640</id>
+          <title>
+            <key>ru</key>
+            <value>Предлагаемые из диалога (отметьте и «В профиль»)</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -3787,14 +3834,6 @@
             <segments>ПредлагаемыеПредпочтения</segments>
           </dataPath>
           <titleLocation>Top</titleLocation>
-          <title>
-            <key>ru</key>
-            <value>Предлагаемые из диалога (отметьте и «В профиль»)</value>
-          </title>
-          <toolTip>
-            <key>ru</key>
-            <value>Модель-экстрактор предлагает предпочтения из последнего обмена (полуавтоматическое пополнение профиля): отметьте нужные и явно сохраните в активный профиль кнопкой «В профиль»</value>
-          </toolTip>
           <excludedCommands>Add</excludedCommands>
           <excludedCommands>Change</excludedCommands>
           <excludedCommands>Copy</excludedCommands>
@@ -3802,6 +3841,10 @@
           <excludedCommands>EndEdit</excludedCommands>
           <excludedCommands>MoveDown</excludedCommands>
           <excludedCommands>MoveUp</excludedCommands>
+          <toolTip>
+            <key>ru</key>
+            <value>Модель-экстрактор предлагает предпочтения из последнего обмена (полуавтоматическое пополнение профиля): отметьте нужные и явно сохраните в активный профиль кнопкой «В профиль»</value>
+          </toolTip>
           <items xsi:type="form:FormField">
             <name>ПредлагаемыеПредпочтенияБрать</name>
             <id>644</id>
@@ -4047,7 +4090,6 @@
             </extendedTooltip>
             <type>UsualGroup</type>
             <extInfo xsi:type="form:UsualGroupExtInfo">
-              <group>Horizontal</group>
               <showLeftMargin>true</showLeftMargin>
               <united>true</united>
               <throughAlign>Auto</throughAlign>
@@ -4057,6 +4099,10 @@
           <items xsi:type="form:Table">
             <name>СравнениеПрофилей</name>
             <id>670</id>
+            <title>
+              <key>ru</key>
+              <value>Один вопрос — всем профилям: ответы и соблюдение предпочтений</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -4066,14 +4112,6 @@
               <segments>СравнениеПрофилей</segments>
             </dataPath>
             <titleLocation>Top</titleLocation>
-            <title>
-              <key>ru</key>
-              <value>Один вопрос — всем профилям: ответы и соблюдение предпочтений</value>
-            </title>
-            <toolTip>
-              <key>ru</key>
-              <value>Проверка задания: каждый профиль отвечает в отдельном новом чате на общий вопрос; колонка «Соблюдено» заполняется автосверкой простой моделью (редактируется вручную)</value>
-            </toolTip>
             <excludedCommands>Add</excludedCommands>
             <excludedCommands>Change</excludedCommands>
             <excludedCommands>Copy</excludedCommands>
@@ -4081,6 +4119,10 @@
             <excludedCommands>EndEdit</excludedCommands>
             <excludedCommands>MoveDown</excludedCommands>
             <excludedCommands>MoveUp</excludedCommands>
+            <toolTip>
+              <key>ru</key>
+              <value>Проверка задания: каждый профиль отвечает в отдельном новом чате на общий вопрос; колонка «Соблюдено» заполняется автосверкой простой моделью (редактируется вручную)</value>
+            </toolTip>
             <items xsi:type="form:FormField">
               <name>СравнениеПрофиль</name>
               <id>674</id>
@@ -4308,7 +4350,6 @@
             </extendedTooltip>
             <type>UsualGroup</type>
             <extInfo xsi:type="form:UsualGroupExtInfo">
-              <group>Horizontal</group>
               <showLeftMargin>true</showLeftMargin>
               <united>true</united>
               <throughAlign>Auto</throughAlign>
@@ -4318,6 +4359,10 @@
           <items xsi:type="form:Table">
             <name>ПроверкаУстойчивости</name>
             <id>700</id>
+            <title>
+              <key>ru</key>
+              <value>Устойчивость: 10 вопросов подряд в одном чате с профилем</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -4327,14 +4372,6 @@
               <segments>ПроверкаУстойчивости</segments>
             </dataPath>
             <titleLocation>Top</titleLocation>
-            <title>
-              <key>ru</key>
-              <value>Устойчивость: 10 вопросов подряд в одном чате с профилем</value>
-            </title>
-            <toolTip>
-              <key>ru</key>
-              <value>Проверка устойчивости (День 12): 10 вопросов реестра подряд в одном чате с активным профилем; колонка «Соблюдено» заполняется автосверкой — первая строка со снятой отметкой и есть номер ответа, с которого предпочтения начали игнорироваться</value>
-            </toolTip>
             <excludedCommands>Add</excludedCommands>
             <excludedCommands>Change</excludedCommands>
             <excludedCommands>Copy</excludedCommands>
@@ -4342,6 +4379,10 @@
             <excludedCommands>EndEdit</excludedCommands>
             <excludedCommands>MoveDown</excludedCommands>
             <excludedCommands>MoveUp</excludedCommands>
+            <toolTip>
+              <key>ru</key>
+              <value>Проверка устойчивости (День 12): 10 вопросов реестра подряд в одном чате с активным профилем; колонка «Соблюдено» заполняется автосверкой — первая строка со снятой отметкой и есть номер ответа, с которого предпочтения начали игнорироваться</value>
+            </toolTip>
             <items xsi:type="form:FormField">
               <name>УстойчивостьВопрос</name>
               <id>704</id>
@@ -5003,10 +5044,6 @@
             <segments>СравнениеСтратегий</segments>
           </dataPath>
           <titleLocation>None</titleLocation>
-          <toolTip>
-            <key>ru</key>
-            <value>Сравнение стратегий управления контекстом (День 10): строки заполняются кнопкой «Зафиксировать результат» после прогона сценария и проверки деталей на соответствующей стратегии. «Строки кода» — статический показатель сложности реализации механизма</value>
-          </toolTip>
           <excludedCommands>Add</excludedCommands>
           <excludedCommands>Change</excludedCommands>
           <excludedCommands>Copy</excludedCommands>
@@ -5014,6 +5051,10 @@
           <excludedCommands>EndEdit</excludedCommands>
           <excludedCommands>MoveDown</excludedCommands>
           <excludedCommands>MoveUp</excludedCommands>
+          <toolTip>
+            <key>ru</key>
+            <value>Сравнение стратегий управления контекстом (День 10): строки заполняются кнопкой «Зафиксировать результат» после прогона сценария и проверки деталей на соответствующей стратегии. «Строки кода» — статический показатель сложности реализации механизма</value>
+          </toolTip>
           <items xsi:type="form:FormField">
             <name>СравнениеСтратегия</name>
             <id>331</id>
