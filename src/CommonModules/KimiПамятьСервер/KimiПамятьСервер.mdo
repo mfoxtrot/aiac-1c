@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4a8e2c63-1f7d-4b9a-8e5c-3d6a9f4b2c71">
+  <name>KimiПамятьСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Память агента Kimi сервер</value>
+  </synonym>
+  <comment>Модель памяти ассистента (День 11): краткосрочная (проекция диалога по стратегии, Дни 9–10), рабочая (заметки текущей задачи, ТЧ документа KimiДиалог) и долговременная (справочник KimiФактыПамяти) память; правила отбора слоёв в промпт, токены слоёв, материал проверки</comment>
+  <server>true</server>
+</mdclass:CommonModule>

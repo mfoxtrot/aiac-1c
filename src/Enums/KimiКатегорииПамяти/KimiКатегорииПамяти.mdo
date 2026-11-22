@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5e1f3a72-9c84-4d2b-b6a5-3d8e1f4c7a29">
+  <producedTypes>
+    <refType typeId="8a4c2e61-3b7d-4f9a-8c5e-2a6d9f1b4e73" valueTypeId="1c9e5a28-6d3b-4a7f-9e2c-5b8d4a6f1c35"/>
+    <listType typeId="7d2b8f45-1a6e-4c3d-9b7a-4e5f2c8d6a91" valueTypeId="3e6c9a17-8f2b-4d5a-a1c8-6d7e4b9f2a54"/>
+    <managerType typeId="9b5e1c38-4a7d-4f62-8e3b-1c5a9d6f2e87" valueTypeId="2a8d4f6b-5c1e-4a93-9d7f-3b6e2c5a8d41"/>
+  </producedTypes>
+  <name>KimiКатегорииПамяти</name>
+  <synonym>
+    <key>ru</key>
+    <value>Категории памяти Kimi</value>
+  </synonym>
+  <comment>Категории фактов долговременной памяти агента (День 11): профиль пользователя, принятые решения, знания</comment>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="6c3a9e52-1d7b-4e8f-9a26-4d5c1b8e3f71">
+    <name>Профиль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Профиль</value>
+    </synonym>
+    <comment>Кто пользователь: имя, роль, предпочтения (правило промпта: всегда в запросе)</comment>
+  </enumValues>
+  <enumValues uuid="8e1c4a36-9b2d-4f5a-8c7e-2a9d3f6b1c54">
+    <name>Решение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Решение</value>
+    </synonym>
+    <comment>Принятые решения и договорённости (правило промпта: релевантные вопросу)</comment>
+  </enumValues>
+  <enumValues uuid="4f7b2d91-6a5c-4e3b-9d8f-1c6e4a2b7d38">
+    <name>Знание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Знание</value>
+    </synonym>
+    <comment>Устойчивые знания и справочные данные (правило промпта: релевантные вопросу)</comment>
+  </enumValues>
+</mdclass:Enum>

@@ -429,4 +429,65 @@
       <dataHistory>Use</dataHistory>
     </attributes>
   </tabularSections>
+  <tabularSections uuid="8d3f6a29-4c1e-4b7d-9a5f-2e8c4d7b1a63">
+    <producedTypes>
+      <objectType typeId="5e9a2c47-7b3d-4f8a-8c1e-6d4b9f2a5c38" valueTypeId="3c7e1b84-9a6f-4d2b-b5e8-1a9c6d4f7b21"/>
+      <rowType typeId="9b2d5f16-4e8a-4c3f-9d6b-7a1e5c8d2f43" valueTypeId="6a4c8e27-1f9b-4d5a-8e7c-2c5b3d9a6f14"/>
+    </producedTypes>
+    <name>РабочаяПамять</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочая память (задача)</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="2e7b9d53-6c4a-4f8b-9d2e-5c1f8a3d6b47">
+      <name>Ключ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ключ</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="8c5a1f34-9e7b-4d6a-8b3c-4f2e6d9a1c58">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+      <toolTip>
+        <key>ru</key>
+        <value>Заметка по текущей задаче (рабочая память, День 11): весь блок целиком попадает в запрос, пока задача активна</value>
+      </toolTip>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+  </tabularSections>
 </mdclass:Document>

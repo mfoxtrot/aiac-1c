@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7c3e8a51-2f4d-4b6a-9c1e-5d8f2a6b4e71">
+  <name>Неделя3MemoryAndState</name>
+  <synonym>
+    <key>ru</key>
+    <value>Memory &amp; State</value>
+  </synonym>
+  <comment>Третья неделя курса (День 11 и далее): модель памяти ассистента — краткосрочная, рабочая и долговременная память (memory layers)</comment>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>CommonCommand.KimiАгент</content>
+</mdclass:Subsystem>
