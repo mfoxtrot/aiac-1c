@@ -4299,6 +4299,7 @@
             <currentRowUse>Auto</currentRowUse>
           </extInfo>
         </items>
+        <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
@@ -5518,7 +5519,6 @@
             <currentRowUse>Auto</currentRowUse>
           </extInfo>
         </items>
-        <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
@@ -5541,6 +5541,7 @@
         <extInfo xsi:type="form:UsualGroupExtInfo">
           <group>Vertical</group>
           <behavior>Collapsible</behavior>
+          <collapsed>true</collapsed>
           <controlRepresentation>Picture</controlRepresentation>
           <representation>NormalSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
@@ -5952,7 +5953,6 @@
             </extendedTooltip>
             <type>UsualGroup</type>
             <extInfo xsi:type="form:UsualGroupExtInfo">
-              <group>Horizontal</group>
               <showLeftMargin>true</showLeftMargin>
               <united>true</united>
               <throughAlign>Auto</throughAlign>
@@ -6152,6 +6152,10 @@
             <items xsi:type="form:FormField">
               <name>СостояниеЗаблокирован</name>
               <id>778</id>
+              <title>
+                <key>ru</key>
+                <value>Переход заблокирован</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -6160,10 +6164,6 @@
               <dataPath xsi:type="form:DataPath">
                 <segments>ПроверкаСостояния.ПереходЗаблокирован</segments>
               </dataPath>
-              <title>
-                <key>ru</key>
-                <value>Переход заблокирован</value>
-              </title>
               <extendedTooltip>
                 <name>СостояниеЗаблокированРасширеннаяПодсказка</name>
                 <id>779</id>
@@ -6188,6 +6188,10 @@
             <items xsi:type="form:FormField">
               <name>СостояниеКорректно</name>
               <id>781</id>
+              <title>
+                <key>ru</key>
+                <value>Корректно отреагировал</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -6196,10 +6200,6 @@
               <dataPath xsi:type="form:DataPath">
                 <segments>ПроверкаСостояния.КорректноОтреагировал</segments>
               </dataPath>
-              <title>
-                <key>ru</key>
-                <value>Корректно отреагировал</value>
-              </title>
               <extendedTooltip>
                 <name>СостояниеКорректноРасширеннаяПодсказка</name>
                 <id>782</id>
