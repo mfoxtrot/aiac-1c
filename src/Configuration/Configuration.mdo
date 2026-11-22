@@ -50,6 +50,7 @@
   <commonModules>CommonModule.KimiКонтекстСервер</commonModules>
   <commonModules>CommonModule.KimiМоделиСервер</commonModules>
   <commonModules>CommonModule.KimiПамятьСервер</commonModules>
+  <commonModules>CommonModule.KimiПерсонализацияСервер</commonModules>
   <commonModules>CommonModule.KimiРассуждениеСервер</commonModules>
   <commonModules>CommonModule.KimiТемператураСервер</commonModules>
   <commonModules>CommonModule.KimiТокеныСервер</commonModules>
@@ -63,6 +64,7 @@
   <constants>Constant.KimiApiKey</constants>
   <catalogs>Catalog.KimiЗадачиГенерации</catalogs>
   <catalogs>Catalog.KimiЗадачиРассуждений</catalogs>
+  <catalogs>Catalog.KimiПрофилиПользователей</catalogs>
   <catalogs>Catalog.KimiФактыПамяти</catalogs>
   <documents>Document.KimiДиалог</documents>
   <enums>Enum.KimiКатегорииПамяти</enums>

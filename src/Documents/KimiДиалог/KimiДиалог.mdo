@@ -229,6 +229,24 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="e950493d-4965-40d1-91db-241eb8c6534b">
+    <name>Профиль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Профиль пользователя</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.KimiПрофилиПользователей</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Персонализация (День 12): профиль пользователя, подключенный к чату; предпочтения профиля добавляются к каждому запросу агента; пусто — без персонализации</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="95be1337-7ba9-4202-bb6a-4cc50a70a6e9">
     <producedTypes>
       <objectType typeId="f4c6ff30-4c62-4d4e-93fb-5c9732f69104" valueTypeId="2ad2df71-3096-4df2-975c-f150daa854c4"/>
