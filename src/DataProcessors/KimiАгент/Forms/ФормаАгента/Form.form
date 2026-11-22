@@ -9998,7 +9998,7 @@
         </stringQualifiers>
       </valueType>
       <view>
-        <common>false</common>
+        <common>true</common>
       </view>
       <edit>
         <common>true</common>
