@@ -5959,7 +5959,7 @@
               <currentRowUse>Auto</currentRowUse>
             </extInfo>
           </items>
-          <items xsi:type="form:FormField">
+          <items xsi:type="form:Table">
             <name>ПроверкаСостояния</name>
             <id>762</id>
             <title>
