@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a5728a55-68b4-4afc-a43b-b6bf4c6d95c3">
+  <producedTypes>
+    <refType typeId="7ffdd77f-c18d-4fe8-8099-7045993eb9b5" valueTypeId="6efa93fc-5803-49c9-9980-851820ded8fd"/>
+    <listType typeId="40bd230c-fc17-4615-9160-c7b39e9cd4be" valueTypeId="360bebb7-bf86-412a-9b47-cc3d69fa7216"/>
+    <managerType typeId="f8264f98-1e8d-4aaa-b2fb-68bd0fbcfc86" valueTypeId="c1f7274e-6242-4e08-b5de-b277d75ec08b"/>
+  </producedTypes>
+  <name>KimiКатегорииИнвариантов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Категории инвариантов Kimi</value>
+  </synonym>
+  <comment>Категории инвариантов агента (День 14): выбранная архитектура, принятые технические решения, ограничения по стеку, бизнес-правила</comment>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="d038ec13-e6f8-4129-b5c1-90c565b0510e">
+    <name>Архитектура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Архитектура</value>
+    </synonym>
+    <comment>Выбранная архитектура приложения (пример инварианта задания)</comment>
+  </enumValues>
+  <enumValues uuid="6beeaccc-39b4-402f-8d18-e911152fe3b3">
+    <name>ТехническоеРешение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Техническое решение</value>
+    </synonym>
+    <comment>Принятые технические решения (пример инварианта задания)</comment>
+  </enumValues>
+  <enumValues uuid="6693f98f-0a5c-46cf-b817-5b5c59ededfe">
+    <name>Стек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стек</value>
+    </synonym>
+    <comment>Ограничения по стеку технологий (пример инварианта задания)</comment>
+  </enumValues>
+  <enumValues uuid="bca62e87-628c-4516-babc-3b60ae058b50">
+    <name>БизнесПравило</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бизнес-правило</value>
+    </synonym>
+    <comment>Бизнес-правила проекта (пример инварианта задания)</comment>
+  </enumValues>
+</mdclass:Enum>

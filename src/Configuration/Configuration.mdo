@@ -47,6 +47,7 @@
   <commonModules>CommonModule.KimiAPIСервер</commonModules>
   <commonModules>CommonModule.KimiАгентИнструменты</commonModules>
   <commonModules>CommonModule.KimiАгентСервер</commonModules>
+  <commonModules>CommonModule.KimiИнвариантыСервер</commonModules>
   <commonModules>CommonModule.KimiКонтекстСервер</commonModules>
   <commonModules>CommonModule.KimiМоделиСервер</commonModules>
   <commonModules>CommonModule.KimiПамятьСервер</commonModules>
@@ -65,9 +66,11 @@
   <constants>Constant.KimiApiKey</constants>
   <catalogs>Catalog.KimiЗадачиГенерации</catalogs>
   <catalogs>Catalog.KimiЗадачиРассуждений</catalogs>
+  <catalogs>Catalog.KimiИнварианты</catalogs>
   <catalogs>Catalog.KimiПрофилиПользователей</catalogs>
   <catalogs>Catalog.KimiФактыПамяти</catalogs>
   <documents>Document.KimiДиалог</documents>
+  <enums>Enum.KimiКатегорииИнвариантов</enums>
   <enums>Enum.KimiКатегорииПамяти</enums>
   <enums>Enum.KimiСпособыРассуждения</enums>
   <enums>Enum.KimiУсилиеРассуждения</enums>

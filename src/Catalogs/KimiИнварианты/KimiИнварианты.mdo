@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bb843b34-6752-4b6a-9196-b7a2a4f4ad48">
+  <producedTypes>
+    <objectType typeId="11f69f72-2b8b-4cc1-9334-7322f570cd8c" valueTypeId="75cebd1d-dc3b-47e0-a7a6-a27007e3c4d8"/>
+    <refType typeId="24a6a7d3-b63c-4802-a0e0-387776b59546" valueTypeId="a6ccab40-17cb-42ff-9623-4ec38ca1a8c6"/>
+    <selectionType typeId="085e8d63-8344-4385-9a50-8f8df5d804aa" valueTypeId="398e870b-e6cf-442f-813e-0bb78b4dd45f"/>
+    <listType typeId="04d306ca-9182-4c91-b820-4c7ae5e0eed2" valueTypeId="ab1a1521-5cde-46a3-876f-85ba0380c135"/>
+    <managerType typeId="c31f4fe9-d350-456b-bf37-5dd6d8e6b91f" valueTypeId="d0937945-e87b-4340-a007-8f08dc7207e0"/>
+  </producedTypes>
+  <name>KimiИнварианты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Инварианты Kimi</value>
+  </synonym>
+  <comment>Инварианты агента (День 14): жёсткие ограничения (архитектура, технические решения, стек, бизнес-правила), которые ассистент не имеет права нарушать. Хранятся отдельно от диалога, меняются только явной командой пользователя; каждое изменение фиксируется в табличной части «История» (что на что заменено)</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.KimiИнварианты.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>PredefinedDataName</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Predefined</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>IsFolder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Owner</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Parent</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Description</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Code</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Инвариант</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Инварианты проекта</value>
+  </listPresentation>
+  <dataHistory>Use</dataHistory>
+  <levelCount>1</levelCount>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="6108dad9-c88e-4cfc-ac13-70dbb4ac830c">
+    <name>Категория</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категория</value>
+    </synonym>
+    <type>
+      <types>EnumRef.KimiКатегорииИнвариантов</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид инварианта: архитектура / техническое решение / стек / бизнес-правило (задание Дня 14)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1ef4d856-73a1-42b4-9e00-e0cc3b194b89">
+    <name>Текст</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст инварианта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Формулировка инварианта — её модель видит в системном промпте и сверяет с ней каждое предложение</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b0f75956-b3c9-4aaa-a9f9-7162bede403e">
+    <name>Сигналы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сигналы нарушения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Запрещённые маркеры (через точку с запятой): если ответ агента предлагает решение с таким признаком, код блокирует ответ до показа пользователю. Сигналы модели НЕ показываются — это вторая линия обороны после промпта</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="010dde1e-a73d-4d8b-a2a7-b42646d60ee0">
+    <producedTypes>
+      <objectType typeId="f2f51a4f-8ce4-4d25-876c-d2ca3ea5e49e" valueTypeId="f4154051-3bc7-40bc-ba6e-cf9a75468a1c"/>
+      <rowType typeId="979e8afd-0685-4fca-b43c-04ee781aac28" valueTypeId="9f35e731-a943-4e45-94e1-7484cd8d0c58"/>
+    </producedTypes>
+    <name>История</name>
+    <synonym>
+      <key>ru</key>
+      <value>История изменений</value>
+    </synonym>
+    <comment>Фиксация изменений инварианта (требование задания «изменение фиксируется с указанием, что и на что заменено»): менять инвариант можно только явной командой (кнопка «Сохранить изменения» на форме агента), диалог его не меняет</comment>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="efcdf2ee-949c-4c9e-9e52-98ef46ec8cdc">
+      <name>ДатаИзменения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата изменения</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>DateTime</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="243b8ba0-62a7-47f8-83f8-ae8a6f55db23">
+      <name>БылоТекст</name>
+      <synonym>
+        <key>ru</key>
+        <value>Было (текст)</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="ba7accdb-c294-47ac-aaee-baf36d1033f1">
+      <name>СталоТекст</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стало (текст)</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="53810521-aeab-4456-9d3c-7620dad1197b">
+      <name>БылоСигналы</name>
+      <synonym>
+        <key>ru</key>
+        <value>Было (сигналы)</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="d8febc21-fbe8-4eab-a72e-9217199d5e51">
+      <name>СталоСигналы</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стало (сигналы)</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>
