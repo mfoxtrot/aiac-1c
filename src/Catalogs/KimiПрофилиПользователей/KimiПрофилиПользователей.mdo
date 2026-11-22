@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="55fa4960-1006-46c2-9dc5-52ed5cc70525">
+  <producedTypes>
+    <objectType typeId="0d77cf52-d104-4f67-b718-0d2180dfc988" valueTypeId="725f6120-5f72-4a21-850a-c4f27db2724a"/>
+    <refType typeId="d625b99a-4da2-4b25-817e-4f9d273bd3ca" valueTypeId="f5fe0298-33cf-49e5-b406-52d280f5a2c1"/>
+    <selectionType typeId="5ab92c26-0795-4dd1-9a8f-c983f1e7e471" valueTypeId="f451e8e4-84d1-46c3-8fda-34790bd5543d"/>
+    <listType typeId="681dda00-f9e9-41e1-96f0-773a72c423de" valueTypeId="7d89822e-8d61-405e-b99f-2d17181e1ad4"/>
+    <managerType typeId="f97d4ca3-ab7d-4d0c-97fe-6b6645b7bdc8" valueTypeId="e25c77aa-98bd-47b4-bb45-ea276bffa429"/>
+  </producedTypes>
+  <name>KimiПрофилиПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Профили пользователей</value>
+  </synonym>
+  <comment>Персонализация ассистента (День 12): профиль пользователя с предпочтениями (аспект, текст) — подключается к каждому запросу агента, пополняется из диалога явным действием</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.KimiПрофилиПользователей.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>PredefinedDataName</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Predefined</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>IsFolder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Owner</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Parent</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Description</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Code</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Профиль пользователя</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Профили пользователей</value>
+  </listPresentation>
+  <dataHistory>Use</dataHistory>
+  <levelCount>1</levelCount>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <tabularSections uuid="ce6acce8-997b-485d-975e-8927c311075c">
+    <producedTypes>
+      <objectType typeId="a5c5ccb8-8eb1-4f89-8e06-3f2d333b8e48" valueTypeId="40359a66-50d0-4aeb-b48e-4a7626d677fe"/>
+      <rowType typeId="1c95a8da-aa96-4f72-ae12-fc6cbeb01e79" valueTypeId="80404ded-7937-4989-80e7-94407dd06d3f"/>
+    </producedTypes>
+    <name>Предпочтения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предпочтения</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="5991fc39-121b-4420-bc7a-a9d0df178fb5">
+      <name>Аспект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Аспект</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Аспект предпочтения: Стиль / Детализация / Формат / Ограничение (список выбора — KimiПерсонализацияСервер.Аспекты)</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="69683b35-c318-4e1f-afd2-c91340277051">
+      <name>Текст</name>
+      <synonym>
+        <key>ru</key>
+        <value>Текст предпочтения</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Формулировка предпочтения, как её прочитает модель (например: «Отвечай кратко: суть в 2–4 предложениях»)</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

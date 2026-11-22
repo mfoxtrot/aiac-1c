@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6603bed7-12ee-4ffc-9811-99fa4eddad80">
+  <name>KimiПерсонализацияСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Персонализация агента Kimi сервер</value>
+  </synonym>
+  <comment>Персонализация ассистента (День 12): профили пользователей (справочник KimiПрофилиПользователей) с предпочтениями (аспект, текст), подключаемые к каждому запросу агента; экстрактор предпочтений из обмена; материал и автосверка проверок (противоположные профили, устойчивость на 10 вопросах)</comment>
+  <server>true</server>
+</mdclass:CommonModule>
