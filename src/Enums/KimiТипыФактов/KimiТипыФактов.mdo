@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="28f88518-3b9e-4f5f-84e3-968a1fcf7e16">
+  <producedTypes>
+    <refType typeId="c4439f53-1a94-4e8f-a350-583b2e8781eb" valueTypeId="b125cb3e-8539-4140-849f-00c665eb6b1a"/>
+    <listType typeId="8deec5e7-b6ae-4f9a-8f29-326377792a89" valueTypeId="2f162a70-cf30-4444-9539-9dac0e4f5c34"/>
+    <managerType typeId="de04bf62-4705-4764-9302-1891cfbaaaec" valueTypeId="f96a9490-a48f-40fd-b259-7fd34efcbb97"/>
+  </producedTypes>
+  <name>KimiТипыФактов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы фактов памяти Kimi</value>
+  </synonym>
+  <comment>Правила жизненного цикла фактов долговременной памяти (День 15): что перезаписывается новым значением, что накапливается списком, что удаляется после завершения задачи</comment>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="21c1c7be-e8e7-4e4e-a890-985c2b9732b8">
+    <name>Перезаписываемый</name>
+    <synonym>
+      <key>ru</key>
+      <value>Перезаписываемый</value>
+    </synonym>
+    <comment>Одно актуальное значение (срок, статус, версия): новое противоречащее значение заменяет старое, старое уходит в историю замен</comment>
+  </enumValues>
+  <enumValues uuid="ace3505c-a5f0-4b7a-b09f-83293550ef70">
+    <name>Накапливаемый</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накапливаемый</value>
+    </synonym>
+    <comment>Список (принятые решения, история изменений): новые пункты дописываются с датой, ничего не удаляется</comment>
+  </enumValues>
+  <enumValues uuid="9f827b38-b842-49ed-889f-2296d5b17399">
+    <name>Временный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Временный</value>
+    </synonym>
+    <comment>Параметры текущей задачи: удаляются (пометка удаления) при завершении задачи; долговременная память при этом сохраняется</comment>
+  </enumValues>
+</mdclass:Enum>
