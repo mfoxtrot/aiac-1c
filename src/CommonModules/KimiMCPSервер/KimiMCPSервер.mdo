@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="426695fb-3d72-498e-ac10-810bcd090271">
+  <name>KimiMCPSервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>MCP сервер Kimi</value>
+  </synonym>
+  <comment>Клиент MCP (Model Context Protocol) для агента (День 16): транспорт Streamable HTTP (JSON-RPC 2.0, спецификация 2025-06-18), методы initialize/tools/list/tools/call, подмена сессии по заголовку Mcp-Session-Id, маппинг схем инструментов MCP в параметр tools запроса к модели (префикс имён mcp__), выполнение вызовов через внешний MCP-сервер (эталон — GitHub MCP с Bearer-токеном)</comment>
+  <server>true</server>
+</mdclass:CommonModule>

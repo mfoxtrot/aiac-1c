@@ -42,9 +42,11 @@
   <subsystems>Subsystem.Неделя1LLMFundamentals</subsystems>
   <subsystems>Subsystem.Неделя2ПервыйАгент</subsystems>
   <subsystems>Subsystem.Неделя3MemoryAndState</subsystems>
+  <subsystems>Subsystem.Неделя4MCPиИнтеграции</subsystems>
   <styleItems>StyleItem.KimiЦветМодели</styleItems>
   <styleItems>StyleItem.KimiЦветПользователя</styleItems>
   <commonModules>CommonModule.KimiAPIСервер</commonModules>
+  <commonModules>CommonModule.KimiMCPSервер</commonModules>
   <commonModules>CommonModule.KimiАгентИнструменты</commonModules>
   <commonModules>CommonModule.KimiАгентСервер</commonModules>
   <commonModules>CommonModule.KimiИнвариантыСервер</commonModules>
@@ -64,6 +66,8 @@
   <commonCommands>CommonCommand.KimiЧат</commonCommands>
   <constants>Constant.GeminiApiKey</constants>
   <constants>Constant.KimiApiKey</constants>
+  <constants>Constant.McpСерверАдрес</constants>
+  <constants>Constant.McpТокен</constants>
   <catalogs>Catalog.KimiЗадачиГенерации</catalogs>
   <catalogs>Catalog.KimiЗадачиРассуждений</catalogs>
   <catalogs>Catalog.KimiИнварианты</catalogs>

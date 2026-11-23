@@ -3584,10 +3584,10 @@
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
                 <wrap>true</wrap>
+                <dropListButton>true</dropListButton>
                 <chooseType>true</chooseType>
                 <typeDomainEnabled>true</typeDomainEnabled>
                 <textEdit>true</textEdit>
-                <dropListButton>true</dropListButton>
               </extInfo>
             </items>
             <commandBarLocation>None</commandBarLocation>
@@ -4343,7 +4343,6 @@
             <currentRowUse>Auto</currentRowUse>
           </extInfo>
         </items>
-        <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
@@ -6331,7 +6330,6 @@
             <currentRowUse>Auto</currentRowUse>
           </extInfo>
         </items>
-        <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
@@ -6529,10 +6527,6 @@
             <segments>ИнвариантыТаблица</segments>
           </dataPath>
           <titleLocation>Top</titleLocation>
-          <handlers>
-            <event>OnActivateRow</event>
-            <name>ИнвариантыТаблицаПриАктивизацииСтроки</name>
-          </handlers>
           <toolTip>
             <key>ru</key>
             <value>Зеркало справочника KimiИнварианты. Диалог инварианты не меняет: правки применяются только кнопкой «Сохранить изменения» (каждое изменение фиксируется в истории: что на что заменено). Сигналы — секретные маркеры кодовой проверки ответа до показа (модели неизвестны)</value>
@@ -6612,10 +6606,10 @@
               <maxWidth>16</maxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
+              <dropListButton>true</dropListButton>
               <chooseType>true</chooseType>
               <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
-              <dropListButton>true</dropListButton>
             </extInfo>
           </items>
           <items xsi:type="form:FormField">
@@ -6702,6 +6696,10 @@
             <id>806</id>
             <horizontalAlign>Left</horizontalAlign>
           </autoCommandBar>
+          <handlers>
+            <event>OnActivateRow</event>
+            <name>ИнвариантыТаблицаПриАктивизацииСтроки</name>
+          </handlers>
           <extendedTooltip>
             <name>ИнвариантыТаблицаРасширеннаяПодсказка</name>
             <id>807</id>
@@ -7554,7 +7552,6 @@
             <textEdit>true</textEdit>
           </extInfo>
         </items>
-        <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
@@ -7713,7 +7710,6 @@
           </extendedTooltip>
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Horizontal</group>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
             <throughAlign>Auto</throughAlign>
@@ -7747,10 +7743,6 @@
             <key>ru</key>
             <value>Факты долговременной памяти с правилами жизненного цикла (День 15): тип (перезаписываемый/накопляемый/временный), дата последней записи, число замен в истории. Активация строки — история замен «было → стало» ниже</value>
           </toolTip>
-          <handlers>
-            <event>OnActivateRow</event>
-            <name>УстареваниеФактыПриАктивизацииСтроки</name>
-          </handlers>
           <items xsi:type="form:FormField">
             <name>УстареваниеФактыКлюч</name>
             <id>914</id>
@@ -7969,6 +7961,10 @@
             <id>913</id>
             <horizontalAlign>Left</horizontalAlign>
           </autoCommandBar>
+          <handlers>
+            <event>OnActivateRow</event>
+            <name>УстареваниеФактыПриАктивизацииСтроки</name>
+          </handlers>
           <extendedTooltip>
             <name>УстареваниеФактыРасширеннаяПодсказка</name>
             <id>929</id>
@@ -8621,7 +8617,6 @@
             <textEdit>true</textEdit>
           </extInfo>
         </items>
-        <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
@@ -8633,6 +8628,342 @@
         <extendedTooltip>
           <name>ГруппаУстареваниеПамятиРасширеннаяПодсказка</name>
           <id>901</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <behavior>Collapsible</behavior>
+          <controlRepresentation>Picture</controlRepresentation>
+          <representation>NormalSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <showTitle>true</showTitle>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаMCP</name>
+        <id>1000</id>
+        <items xsi:type="form:FormField">
+          <name>McpИнструментыВключены</name>
+          <id>1001</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>McpИнструментыВключены</segments>
+          </dataPath>
+          <titleLocation>Right</titleLocation>
+          <toolTip>
+            <key>ru</key>
+            <value>Инструменты внешнего MCP-сервера (День 16): схемы инструментов запрашиваются у сервера (константа «Адрес MCP-сервера») и передаются модели вместе с локальными; вызовы имён с префиксом mcp__ выполняет внешний сервер. Требуются включённые инструменты (флажок «Инструменты включены», День 6) и недоступны в режиме «Только лёгкая модель Google» (инструменты отключены, День 11)</value>
+          </toolTip>
+          <toolTipRepresentation>Button</toolTipRepresentation>
+          <extendedTooltip>
+            <name>McpИнструментыВключеныРасширеннаяПодсказка</name>
+            <id>1002</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>McpИнструментыВключеныКонтекстноеМеню</name>
+            <id>1003</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>McpИнфоСервер</name>
+          <id>1004</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>McpИнфоСервер</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <toolTip>
+            <key>ru</key>
+            <value>Сведения о последней проверке соединения: имя и версия MCP-сервера, версия протокола и число доступных инструментов (кнопка «Проверить соединение»)</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>McpИнфоСерверРасширеннаяПодсказка</name>
+            <id>1005</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>McpИнфоСерверКонтекстноеМеню</name>
+            <id>1006</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <readOnly>true</readOnly>
+          <editMode>Enter</editMode>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаMCPКнопки</name>
+          <id>1007</id>
+          <items xsi:type="form:Button">
+            <name>ПроверитьMCPКнопка</name>
+            <id>1008</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <skipOnInput>false</skipOnInput>
+            <extendedTooltip>
+              <name>ПроверитьMCPКнопкаРасширеннаяПодсказка</name>
+              <id>1009</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.ПроверитьMCP</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <items xsi:type="form:Button">
+            <name>ДемоЛокальныйИMCPКнопка</name>
+            <id>1010</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <skipOnInput>false</skipOnInput>
+            <extendedTooltip>
+              <name>ДемоЛокальныйИMCPКнопкаРасширеннаяПодсказка</name>
+              <id>1011</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.ДемоЛокальныйИMCP</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ГруппаMCPКнопкиРасширеннаяПодсказка</name>
+            <id>1012</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Table">
+          <name>McpИнструменты</name>
+          <id>1013</id>
+          <title>
+            <key>ru</key>
+            <value>Инструменты MCP-сервера (с префиксом mcp__ уходят в запрос к модели)</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>McpИнструменты</segments>
+          </dataPath>
+          <titleLocation>Top</titleLocation>
+          <toolTip>
+            <key>ru</key>
+            <value>Инструменты, вернувшиеся с сервера методом tools/list при последней проверке соединения (или переданные агенту при обмене). Это инструменты, которые мы не писали: схемы и реализация живут на внешнем MCP-сервере</value>
+          </toolTip>
+          <items xsi:type="form:FormField">
+            <name>McpИнструментыИмя</name>
+            <id>1014</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>McpИнструменты.Имя</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>McpИнструментыИмяРасширеннаяПодсказка</name>
+              <id>1015</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>McpИнструментыИмяКонтекстноеМеню</name>
+              <id>1016</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <width>28</width>
+              <maxWidth>28</maxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>McpИнструментыОписание</name>
+            <id>1017</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>McpИнструменты.Описание</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>McpИнструментыОписаниеРасширеннаяПодсказка</name>
+              <id>1018</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>McpИнструментыОписаниеКонтекстноеМеню</name>
+              <id>1019</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <commandBarLocation>None</commandBarLocation>
+          <autoCommandBar>
+            <name>McpИнструментыКоманднаяПанель</name>
+            <id>1020</id>
+            <horizontalAlign>Left</horizontalAlign>
+          </autoCommandBar>
+          <extendedTooltip>
+            <name>McpИнструментыРасширеннаяПодсказка</name>
+            <id>1021</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>McpИнструментыКонтекстноеМеню</name>
+            <id>1022</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <heightInTableRows>4</heightInTableRows>
+          <autoMaxRowsCount>true</autoMaxRowsCount>
+          <header>true</header>
+          <headerHeight>1</headerHeight>
+          <horizontalScrollBar>AutoUse</horizontalScrollBar>
+          <verticalScrollBar>AutoUse</verticalScrollBar>
+          <horizontalLines>true</horizontalLines>
+          <verticalLines>true</verticalLines>
+          <searchOnInput>Auto</searchOnInput>
+          <initialListView>Auto</initialListView>
+          <horizontalStretch>true</horizontalStretch>
+          <borderColor xsi:type="core:ColorRef">
+            <color>Style.BorderColor</color>
+          </borderColor>
+          <searchStringLocation>None</searchStringLocation>
+          <viewStatusLocation>None</viewStatusLocation>
+          <searchControlLocation>None</searchControlLocation>
+          <rowFilter xsi:type="core:UndefinedValue"/>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>MCP (внешние инструменты)</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаMCPРасширеннаяПодсказка</name>
+          <id>1023</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -11237,9 +11568,7 @@
       <id>1</id>
       <valueType>
         <types>Date</types>
-        <dateQualifiers>
-          <dateFractions>DateTime</dateFractions>
-        </dateQualifiers>
+        <dateQualifiers/>
       </valueType>
       <view>
         <common>true</common>
@@ -11583,7 +11912,6 @@
         <types>Number</types>
         <numberQualifiers>
           <precision>10</precision>
-          <scale>0</scale>
           <nonNegative>true</nonNegative>
         </numberQualifiers>
       </valueType>
@@ -11843,6 +12171,113 @@
       <stringQualifiers>
         <length>200</length>
       </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>McpИнструментыВключены</name>
+    <title>
+      <key>ru</key>
+      <value>Инструменты MCP включены</value>
+    </title>
+    <id>70</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>McpИнфоСервер</name>
+    <title>
+      <key>ru</key>
+      <value>MCP-сервер</value>
+    </title>
+    <id>71</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>McpИнструменты</name>
+    <title>
+      <key>ru</key>
+      <value>Инструменты MCP-сервера</value>
+    </title>
+    <id>72</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Имя</name>
+      <title>
+        <key>ru</key>
+        <value>Имя инструмента</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Описание</name>
+      <title>
+        <key>ru</key>
+        <value>Описание (уходит модели в схеме инструмента)</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>McpПечатьТелаЗапроса</name>
+    <title>
+      <key>ru</key>
+      <value>Печать тела запроса MCP</value>
+    </title>
+    <id>73</id>
+    <valueType>
+      <types>Boolean</types>
     </valueType>
     <view>
       <common>true</common>
@@ -12814,6 +13249,48 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ОбновитьУстаревание</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ПроверитьMCP</name>
+    <title>
+      <key>ru</key>
+      <value>Проверить соединение</value>
+    </title>
+    <id>47</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Установить MCP-соединение (initialize) и получить список инструментов сервера (tools/list): сведения о сервере и таблица инструментов появятся в группе «MCP»</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПроверитьMCP</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ДемоЛокальныйИMCP</name>
+    <title>
+      <key>ru</key>
+      <value>Демо: локальный + MCP</value>
+    </title>
+    <id>48</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Смешанный проверочный сценарий Дня 16: новый чат, один вопрос, в котором нужны и локальный инструмент Дня 6 (calculator), и инструмент MCP-сервера (GitHub); тело запроса к модели (схемы обоих инструментов) печатается в окно сообщений</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ДемоЛокальныйИMCP</name>
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>

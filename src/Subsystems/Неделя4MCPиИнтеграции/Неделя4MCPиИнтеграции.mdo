@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b12e61d4-f82a-4c4a-b80e-e71e1885ec48">
+  <name>Неделя4MCPиИнтеграции</name>
+  <synonym>
+    <key>ru</key>
+    <value>MCP &amp; Интеграции</value>
+  </synonym>
+  <comment>Четвёртая неделя курса (День 16 и далее): подключение агента к внешним инструментам по протоколу MCP (Model Context Protocol) — клиент Streamable HTTP, схемы инструментов внешнего сервера в запросе к модели, смешанный набор локальных и MCP-инструментов</comment>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>CommonCommand.KimiАгент</content>
+</mdclass:Subsystem>

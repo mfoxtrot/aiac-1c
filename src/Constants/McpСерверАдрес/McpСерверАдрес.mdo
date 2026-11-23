@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0620af21-2f51-44c3-a226-03d27d2c3061">
+  <producedTypes>
+    <managerType typeId="999778e0-cf4b-419f-bb29-28883021284b" valueTypeId="4b4d6123-ccc3-4f29-a97e-e667a2cda211"/>
+    <valueManagerType typeId="cde26558-7972-4519-bac4-fd2c102e264a" valueTypeId="8d9f683f-fa6a-4684-bf4f-0fe22149ad0e"/>
+    <valueKeyType typeId="9edd4d8e-1f51-4a27-8c93-69bb34e9f29e" valueTypeId="4f265461-0872-4dae-8732-ffa2b63ff4f8"/>
+  </producedTypes>
+  <name>McpСерверАдрес</name>
+  <synonym>
+    <key>ru</key>
+    <value>Адрес MCP-сервера</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>250</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <toolTip>
+    <key>ru</key>
+    <value>Адрес (URL) MCP-сервера по транспорту Streamable HTTP, например https://api.githubcopilot.com/mcp/readonly (GitHub MCP, рекомендуемый набор инструментов только для чтения) или https://docs.mcp.cloudflare.com/mcp (без авторизации). Заполняется в режиме 1С:Предприятие.</value>
+  </toolTip>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>
