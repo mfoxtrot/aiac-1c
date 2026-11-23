@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="47b7d7a0-84a2-41bf-a7db-a730abec33c2">
+  <producedTypes>
+    <managerType typeId="68b62998-1064-4cec-9b0e-0948f9be546a" valueTypeId="08ff25ce-ae2e-4b56-8bc0-0d18db29de96"/>
+    <valueManagerType typeId="c0eb0586-a55e-484d-9065-89a3cfac1189" valueTypeId="8a5885e2-d5b0-4798-895f-03d3620226b9"/>
+    <valueKeyType typeId="e8a1d517-4ce3-4932-aac1-4977e6299395" valueTypeId="db698e9b-8366-48d9-8e61-e61a7cdba086"/>
+  </producedTypes>
+  <name>McpТокен</name>
+  <synonym>
+    <key>ru</key>
+    <value>Токен MCP-сервера</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>250</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <passwordMode>true</passwordMode>
+  <toolTip>
+    <key>ru</key>
+    <value>Токен доступа к MCP-серверу (заголовок Authorization: Bearer). Для GitHub MCP — персональный токен доступа (PAT) с правом чтения репозиториев. Для серверов без авторизации оставьте пустым. Заполняется в режиме 1С:Предприятие, в репозиторий не коммитится.</value>
+  </toolTip>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>
