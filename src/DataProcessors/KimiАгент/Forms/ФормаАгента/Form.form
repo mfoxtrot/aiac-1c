@@ -8342,7 +8342,7 @@
             </extInfo>
           </items>
           <items xsi:type="form:FormField">
-            <name>ПроверкаУстареванияАктуальноеЗначение</name>
+            <name>ПроверкаУстареванияЭталон</name>
             <id>955</id>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -8350,10 +8350,10 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>ПроверкаУстаревания.АктуальноеЗначение</segments>
+              <segments>ПроверкаУстаревания.Эталон</segments>
             </dataPath>
             <extendedTooltip>
-              <name>ПроверкаУстареванияАктуальноеЗначениеРасширеннаяПодсказка</name>
+              <name>ПроверкаУстареванияЭталонРасширеннаяПодсказка</name>
               <id>956</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -8363,7 +8363,7 @@
               </extInfo>
             </extendedTooltip>
             <contextMenu>
-              <name>ПроверкаУстареванияАктуальноеЗначениеКонтекстноеМеню</name>
+              <name>ПроверкаУстареванияЭталонКонтекстноеМеню</name>
               <id>957</id>
               <autoFill>true</autoFill>
             </contextMenu>
@@ -11743,10 +11743,10 @@
       </edit>
     </columns>
     <columns>
-      <name>АктуальноеЗначение</name>
+      <name>Эталон</name>
       <title>
         <key>ru</key>
-        <value>Актуальное значение</value>
+        <value>Актуальное значение (эталон)</value>
       </title>
       <id>3</id>
       <valueType>
