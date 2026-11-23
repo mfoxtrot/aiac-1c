@@ -8975,7 +8975,6 @@
         <extInfo xsi:type="form:UsualGroupExtInfo">
           <group>Vertical</group>
           <behavior>Collapsible</behavior>
-          <collapsed>true</collapsed>
           <controlRepresentation>Picture</controlRepresentation>
           <representation>NormalSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
