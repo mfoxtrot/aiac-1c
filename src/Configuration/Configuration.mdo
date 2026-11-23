@@ -73,6 +73,7 @@
   <enums>Enum.KimiКатегорииИнвариантов</enums>
   <enums>Enum.KimiКатегорииПамяти</enums>
   <enums>Enum.KimiСпособыРассуждения</enums>
+  <enums>Enum.KimiТипыФактов</enums>
   <enums>Enum.KimiУсилиеРассуждения</enums>
   <reports>Report.KimiИтогиМоделей</reports>
   <reports>Report.KimiРезультатыРассуждений</reports>

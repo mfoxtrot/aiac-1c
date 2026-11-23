@@ -12,7 +12,7 @@
     <key>ru</key>
     <value>Факты памяти Kimi</value>
   </synonym>
-  <comment>Долговременная память агента (День 11): факты «ключ-значение» с категорией; пополняется явным действием пользователя из фактов диалога (механизм Дня 10)</comment>
+  <comment>Долговременная память агента (День 11): факты «ключ-значение» с категорией; пополняется явным действием пользователя из фактов диалога (механизм Дня 10). День 15: тип жизненного цикла (перезаписываемый/накопляемый/временный), история замен «было → стало», приоритет более поздней даты записи</comment>
   <useStandardCommands>true</useStandardCommands>
   <inputByString>Catalog.KimiФактыПамяти.StandardAttribute.Description</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
@@ -152,6 +152,24 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="28385b73-0608-4d95-91dc-a58dc09a5886">
+    <name>Тип</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип факта</value>
+    </synonym>
+    <type>
+      <types>EnumRef.KimiТипыФактов</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Правило жизненного цикла (День 15): перезаписываемый (срок, статус, версия), накапливаемый (решения, история), временный (удаляется при завершении задачи). Пустой тип нормализуется по категории: «Решение» — накапливаемый, иначе перезаписываемый</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <attributes uuid="7b4d9f13-2a6c-4e8b-9d1f-5c3a7e2b4d68">
     <name>Источник</name>
     <synonym>
@@ -187,4 +205,88 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <tabularSections uuid="6d77c22c-0db8-429a-85b1-fd16e85811f4">
+    <producedTypes>
+      <objectType typeId="2d5c32c2-c05d-4827-a700-2e7087fa5492" valueTypeId="fc4645d5-6b5f-4f4e-98c5-a7c80d5666ce"/>
+      <rowType typeId="2f29d25f-d3e7-40f2-8fd4-9e4d2d70abfb" valueTypeId="f44cfddd-4292-4468-be18-880266507ad8"/>
+    </producedTypes>
+    <name>История</name>
+    <synonym>
+      <key>ru</key>
+      <value>История замен</value>
+    </synonym>
+    <comment>Фиксация изменений значения факта (требование Дня 15 «замена фиксируется в логе: что было, что стало»): перезапись конфликтующего значения и дополнение накапливаемого списка пишутся сюда автоматически при сохранении</comment>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="4a43b156-3d4e-4c78-8786-91ae1ee46cd3">
+      <name>ДатаИзменения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата изменения</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>DateTime</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="6f6a3a20-f5e7-4716-b9da-8a0350cae6a1">
+      <name>Действие</name>
+      <synonym>
+        <key>ru</key>
+        <value>Действие</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="7df237ed-87f6-420f-a2d2-e65e86205529">
+      <name>БылоЗначение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Было (значение)</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="b10f0734-c96b-4686-961d-db0ba9a5c617">
+      <name>СталоЗначение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стало (значение)</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+  </tabularSections>
 </mdclass:Catalog>
